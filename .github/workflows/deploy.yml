@@ -25,7 +25,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'npm'
           cache-dependency-path: frontend/package-lock.json
 
@@ -37,8 +37,9 @@ jobs:
         working-directory: frontend
         env:
           # GitHub Pages 프로젝트 페이지 경로: /<리포지토리명>/
-          # 예) 리포지토리가 hifive 라면 /hifive/ 가 된다
           VITE_BASE_PATH: /${{ github.event.repository.name }}/
+          # 데모 모드: 백엔드 없이 하드코딩된 계정으로 로그인 가능
+          VITE_DEMO_MODE: 'true'
         run: npm run build
 
       - name: Upload Pages artifact

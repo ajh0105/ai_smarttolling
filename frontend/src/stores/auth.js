@@ -4,6 +4,21 @@ import { authApi } from '@/api/auth'
 
 const STORAGE_KEY = 'hifive.member'
 
+const DEMO_MODE = import.meta.env.VITE_DEMO_MODE === 'true'
+
+const DEMO_ACCOUNTS = [
+  {
+    email: 'user@hifive.demo',
+    password: 'demo1234',
+    member: { email: 'user@hifive.demo', memberName: '데모 사용자', plateNumber: '12가3456', role: 'USER', assignedDashboardId: null }
+  },
+  {
+    email: 'admin@hifive.demo',
+    password: 'admin1234',
+    member: { email: 'admin@hifive.demo', memberName: '관리자 (데모)', plateNumber: '00가0000', role: 'MASTER_ADMIN', assignedDashboardId: 1 }
+  }
+]
+
 export const useAuthStore = defineStore('auth', () => {
   // member: { email, memberName, plateNumber, role, assignedDashboardId } | null
   const member = ref(null)
@@ -33,6 +48,9 @@ export const useAuthStore = defineStore('auth', () => {
   }
 
   async function signUp(form) {
+    if (DEMO_MODE) {
+      return { ok: false, message: '데모 환경에서는 회원가입을 지원하지 않습니다. 아래 데모 계정으로 로그인해 주세요.' }
+    }
     loading.value = true
     error.value = null
     try {
@@ -48,6 +66,17 @@ export const useAuthStore = defineStore('auth', () => {
   }
 
   async function login(form) {
+    if (DEMO_MODE) {
+      const account = DEMO_ACCOUNTS.find(
+        (a) => a.email === form.email && a.password === form.password
+      )
+      if (account) {
+        member.value = account.member
+        persist()
+        return { ok: true, message: '데모 로그인 성공' }
+      }
+      return { ok: false, message: '이메일 또는 비밀번호가 올바르지 않습니다.' }
+    }
     loading.value = true
     error.value = null
     try {
@@ -65,6 +94,11 @@ export const useAuthStore = defineStore('auth', () => {
   }
 
   async function logout() {
+    if (DEMO_MODE) {
+      member.value = null
+      persist()
+      return
+    }
     try {
       await authApi.logout()
     } finally {

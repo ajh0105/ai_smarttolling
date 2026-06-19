@@ -229,7 +229,7 @@ onMounted(() => { loadFastApiStatus() })
         <h2>이상 알림</h2>
         <span class="pdm-count-chip">{{ alerts.length }}</span>
       </div>
-      <div class="pdm-alert-list pdm-alert-list--scroll" :style="`max-height:${barChartHeight}px`">
+      <div class="pdm-alert-list pdm-alert-list--scroll" style="max-height:320px">
         <div
           v-for="alert in alerts"
           :key="alert.alertId"

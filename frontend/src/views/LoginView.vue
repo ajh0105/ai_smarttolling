@@ -4,6 +4,12 @@ import { useRouter, useRoute } from 'vue-router'
 import { useAuthStore } from '@/stores/auth'
 import SiteHeader from '@/components/SiteHeader.vue'
 
+const DEMO_MODE = import.meta.env.VITE_DEMO_MODE === 'true'
+const DEMO_ACCOUNTS = [
+  { label: '일반 사용자', email: 'user@hifive.demo', password: 'demo1234' },
+  { label: '관리자 (대시보드 접근)', email: 'admin@hifive.demo', password: 'admin1234' }
+]
+
 const auth = useAuthStore()
 const router = useRouter()
 const route = useRoute()
@@ -61,6 +67,17 @@ function notReady() {
         <section class="auth-card" aria-labelledby="login-title">
           <h1 id="login-title">로그인</h1>
           <p class="subtitle">Hi-Five 계정으로 로그인해주세요.</p>
+
+          <div v-if="DEMO_MODE" class="demo-notice">
+            <p class="demo-notice-title">데모 환경 — 아래 계정으로 로그인하세요</p>
+            <ul class="demo-account-list">
+              <li v-for="a in DEMO_ACCOUNTS" :key="a.email" @click="form.email = a.email; form.password = a.password">
+                <span class="demo-label">{{ a.label }}</span>
+                <span class="demo-cred">{{ a.email }} / {{ a.password }}</span>
+              </li>
+            </ul>
+            <p class="demo-notice-hint">계정을 클릭하면 자동으로 입력됩니다.</p>
+          </div>
 
           <form class="auth-form" @submit.prevent="handleSubmit">
             <div class="form-row">
@@ -127,3 +144,60 @@ function notReady() {
     </footer>
   </div>
 </template>
+
+<style scoped>
+.demo-notice {
+  background: #f0f6ff;
+  border: 1px solid #c2d9ff;
+  border-radius: 10px;
+  padding: 14px 16px 10px;
+  margin-bottom: 20px;
+}
+.demo-notice-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #1b3be8;
+  margin: 0 0 10px;
+  letter-spacing: 0.01em;
+}
+.demo-account-list {
+  list-style: none;
+  margin: 0 0 8px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.demo-account-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border: 1px solid #d0e2ff;
+  border-radius: 7px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.demo-account-list li:hover {
+  background: #e6f0ff;
+}
+.demo-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #10213a;
+  white-space: nowrap;
+  min-width: 120px;
+}
+.demo-cred {
+  font-size: 12px;
+  color: #4a6080;
+  font-family: ui-monospace, monospace;
+}
+.demo-notice-hint {
+  font-size: 11px;
+  color: #7a99c0;
+  margin: 0;
+  text-align: right;
+}
+</style>
