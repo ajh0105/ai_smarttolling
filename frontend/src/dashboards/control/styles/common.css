@@ -1,0 +1,21 @@
+/* Dashboard 페이지가 글로벌 import되므로 html/body/#app 전역 룰은
+   App.vue의 .dashboard-app-shell wrapper로 위임하여 잔존 스타일을 방지한다. */
+.dashboard-app-shell,
+.dashboard-app-main {
+  background: #eef3f8;
+}
+
+.ops-shell *,
+.master-shell * {
+  box-sizing: border-box;
+}
+
+button,
+select,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}

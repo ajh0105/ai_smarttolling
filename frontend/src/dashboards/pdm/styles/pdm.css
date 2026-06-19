@@ -1,0 +1,513 @@
+/* ── PDM 예지보전 대시보드 ──────────────────────────────────── */
+.pdm-page { display: grid; gap: 14px; align-content: start; }
+
+/* KPI */
+.pdm-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+.pdm-kpi-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  padding: 18px 16px;
+  border: 1px solid rgba(42,133,227,.28);
+  border-radius: 6px;
+  background: rgba(5,16,33,.72);
+  backdrop-filter: blur(16px);
+}
+.pdm-kpi-card span { color: #9fb2cb; font-size: 13px; }
+.pdm-kpi-card strong { color: #e6f1ff; font-size: 28px; font-weight: 800; line-height: 1.1; }
+.pdm-kpi-card small { font-size: 15px; margin-left: 2px; }
+
+.pdm-score-track {
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(255,255,255,0.08);
+  margin-top: 4px;
+  overflow: hidden;
+}
+.pdm-score-fill {
+  height: 100%;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #2f8cff, #4cdf66);
+  transition: width 0.4s;
+}
+
+/* 색상 토큰 */
+.pdm-ok     { color: #4cdf66 !important; }
+.pdm-warn   { color: #f5b84b !important; }
+.pdm-danger { color: #ef5a54 !important; }
+
+/* 카메라 카드 */
+.pdm-cam-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.pdm-cam-card { padding: 16px; }
+
+.pdm-cam-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.pdm-cam-title b  { display: block; color: #e6f1ff; font-size: 16px; font-weight: 800; }
+.pdm-cam-title span { display: block; margin-top: 3px; color: #9fb2cb; font-size: 12px; }
+
+.pdm-risk-badge {
+  display: inline-grid;
+  place-items: center;
+  height: 24px;
+  padding: 0 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+.pdm-risk-badge.pdm-ok     { background: rgba(76,223,102,.16); color: #4cdf66; }
+.pdm-risk-badge.pdm-warn   { background: rgba(245,184,75,.16); color: #f5b84b; }
+.pdm-risk-badge.pdm-danger { background: rgba(239,90,84,.16);  color: #ef5a54; }
+
+.pdm-cam-body {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 14px;
+  align-items: center;
+}
+.pdm-gauge-wrap { flex-shrink: 0; }
+.pdm-css-gauge {
+  position: relative;
+  width: 132px;
+  height: 106px;
+}
+.pdm-css-gauge svg {
+  width: 132px;
+  height: 82px;
+  display: block;
+}
+.pdm-css-gauge-track,
+.pdm-css-gauge-value {
+  fill: none;
+  stroke-linecap: round;
+  stroke-width: 11;
+}
+.pdm-css-gauge-track {
+  stroke: rgba(255,255,255,0.08);
+}
+.pdm-css-gauge-value {
+  stroke: #2f8cff;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  transition: stroke-dashoffset 900ms cubic-bezier(.22,.61,.36,1);
+}
+.pdm-css-gauge.pdm-ok .pdm-css-gauge-value { stroke: #4cdf66; }
+.pdm-css-gauge.pdm-warn .pdm-css-gauge-value { stroke: #f5b84b; }
+.pdm-css-gauge.pdm-danger .pdm-css-gauge-value { stroke: #ef5a54; }
+.pdm-css-gauge strong {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 48px;
+  color: #e6f1ff;
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1;
+  text-align: center;
+}
+.pdm-css-gauge span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 74px;
+  color: #9fb2cb;
+  font-size: 11px;
+  text-align: center;
+}
+.pdm-css-gauge.pdm-ok strong { color: #4cdf66; }
+.pdm-css-gauge.pdm-warn strong { color: #f5b84b; }
+.pdm-css-gauge.pdm-danger strong { color: #ef5a54; }
+
+/* 지표 바 */
+.pdm-cam-metrics { display: flex; flex-direction: column; gap: 10px; }
+.pdm-metric-row {
+  display: grid;
+  grid-template-columns: 84px 1fr 48px;
+  align-items: center;
+  gap: 8px;
+}
+.pdm-metric-row span { color: #9fb2cb; font-size: 12px; white-space: nowrap; }
+.pdm-metric-row b    { color: #e6f1ff; font-size: 13px; font-weight: 700; text-align: right; }
+
+.pdm-mini-bar-wrap {
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(255,255,255,0.08);
+  overflow: hidden;
+}
+.pdm-mini-bar {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.4s;
+  background: #4cdf66;
+}
+.pdm-mini-bar.pdm-blue { background: #2f8cff; }
+.pdm-mini-bar.pdm-warn { background: #f5b84b; }
+.pdm-mini-bar.pdm-ok   { background: #4cdf66; }
+
+/* 원인/권장 */
+.pdm-cam-reason {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(125,164,210,.14);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.pdm-cam-reason p { margin: 0; font-size: 12px; color: #dce9f8; }
+.pdm-cam-reason span {
+  display: block;
+  margin-bottom: 3px;
+  color: #9fb2cb;
+  font-size: 11px;
+}
+
+/* 중간 그리드: 추세 차트 + 알림 */
+.pdm-mid-grid {
+  display: grid;
+  grid-template-columns: 1.45fr 1fr;
+  gap: 14px;
+}
+
+/* 추세 차트 */
+.pdm-trend-panel { padding-bottom: 12px; }
+.pdm-trend-panel--fill {
+  display: flex;
+  flex-direction: column;
+}
+.pdm-chart-fill {
+  flex: 1;
+  min-height: 0;
+}
+.pdm-score-bars {
+  display: grid;
+  gap: 14px;
+  padding: 18px 20px 22px;
+}
+.pdm-score-bar-row {
+  display: grid;
+  grid-template-columns: 92px 1fr 42px;
+  align-items: center;
+  gap: 12px;
+}
+.pdm-score-bar-row b {
+  color: #dce9f8;
+  font-size: 12px;
+}
+.pdm-score-bar-row strong {
+  font-size: 13px;
+  text-align: right;
+}
+.pdm-score-bar-track {
+  height: 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  overflow: hidden;
+}
+.pdm-score-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: #2f8cff;
+  transition: width 900ms cubic-bezier(.22,.61,.36,1);
+}
+.pdm-score-bar-fill.pdm-ok { background: #4cdf66; }
+.pdm-score-bar-fill.pdm-warn { background: #f5b84b; }
+.pdm-score-bar-fill.pdm-danger { background: #ef5a54; }
+.pdm-score-empty {
+  color: #9fb2cb;
+  font-size: 13px;
+  text-align: center;
+  padding: 42px 0;
+}
+.pdm-cam-tabs { display: flex; gap: 6px; }
+.pdm-cam-tabs button {
+  height: 26px;
+  padding: 0 12px;
+  border: 1px solid rgba(42,133,227,.38);
+  border-radius: 5px;
+  background: transparent;
+  color: #9fb2cb;
+  font-size: 12px;
+  font-weight: 700;
+}
+.pdm-cam-tabs button.active {
+  background: rgba(22,103,219,.45);
+  border-color: rgba(33,130,255,.7);
+  color: #fff;
+}
+
+/* 카메라 카드 모델 탭 바 */
+.pdm-model-tab-bar {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(125,164,210,.14);
+}
+.pdm-model-tab-bar button {
+  height: 24px;
+  padding: 0 10px;
+  border: 1px solid rgba(42,133,227,.32);
+  border-radius: 4px;
+  background: transparent;
+  color: #9fb2cb;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.pdm-model-tab-bar button.active {
+  background: rgba(22,103,219,.42);
+  border-color: rgba(33,130,255,.65);
+  color: #e6f1ff;
+}
+
+/* 모델 탭 — 종합 탭: 미니 모델 점수 행 */
+.pdm-model-mini-scores {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(125,164,210,.12);
+}
+.pdm-model-mini-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+}
+.pdm-model-mini-row span { color: #9fb2cb; }
+.pdm-model-mini-row b   { color: #e6f1ff; font-weight: 700; }
+
+/* 모델 탭 — 개별 모델 결과 */
+.pdm-model-result-body {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 14px;
+  align-items: center;
+}
+.pdm-model-result-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* 모델 탭 — 대기 중 */
+.pdm-model-pending {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 130px;
+  color: #9fb2cb;
+}
+.pdm-model-pending span { font-size: 13px; font-weight: 700; }
+.pdm-model-pending small { font-size: 11px; color: #7a94b0; }
+
+/* 알림 패널 */
+.pdm-count-chip {
+  display: inline-grid;
+  place-items: center;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  border-radius: 11px;
+  background: rgba(239,90,84,.24);
+  color: #ef5a54;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* pdm-alert-panel 내 panel-head flex 보장 (마스터 대시보드 포함) */
+.pdm-alert-panel .panel-head {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.pdm-alert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  padding: 8px 12px 12px;
+  overflow-y: auto;
+}
+
+/* 알림 목록 스크롤 높이 (관제 대시보드 트렌드 차트 220px 기준) */
+.pdm-alert-list--scroll {
+  max-height: 220px;
+}
+.pdm-alert-row {
+  display: grid;
+  grid-template-columns: 10px 1fr auto;
+  gap: 10px;
+  align-items: start;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(125,164,210,.1);
+}
+.pdm-alert-row:last-child { border-bottom: 0; }
+
+.pdm-alert-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-top: 5px;
+  flex-shrink: 0;
+  background: #9fb2cb;
+}
+.pdm-alert-dot.pdm-ok     { background: #4cdf66; box-shadow: 0 0 6px rgba(76,223,102,.4); }
+.pdm-alert-dot.pdm-warn   { background: #f5b84b; box-shadow: 0 0 6px rgba(245,184,75,.4); }
+.pdm-alert-dot.pdm-danger { background: #ef5a54; box-shadow: 0 0 6px rgba(239,90,84,.4); }
+
+.pdm-alert-body b   { display: block; color: #e6f1ff; font-size: 13px; font-weight: 700; }
+.pdm-alert-body span{ display: block; margin-top: 2px; color: #9fb2cb; font-size: 11px; }
+.pdm-alert-body em  { display: block; margin-top: 2px; color: #b0c4d8; font-size: 11px; font-style: normal; }
+
+.pdm-alert-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 5px; }
+.pdm-alert-meta time { color: #7a94b0; font-size: 11px; }
+
+/* 뱃지 */
+.pdm-badge {
+  display: inline-grid;
+  place-items: center;
+  height: 22px;
+  padding: 0 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 800;
+}
+.pdm-badge-ok   { background: rgba(76,223,102,.14); color: #4cdf66; }
+.pdm-badge-warn { background: rgba(245,184,75,.16); color: #f5b84b; }
+.pdm-badge-info { background: rgba(47,140,255,.16);  color: #2f8cff; }
+
+/* 필터 탭 (Master 집계 테이블용) */
+.pdm-filter-tabs { display: flex; gap: 6px; }
+.pdm-filter-tabs button {
+  height: 26px;
+  padding: 0 12px;
+  border: 1px solid rgba(42,133,227,.38);
+  border-radius: 5px;
+  background: transparent;
+  color: #9fb2cb;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.pdm-filter-tabs button.active {
+  background: rgba(22,103,219,.45);
+  border-color: rgba(33,130,255,.7);
+  color: #fff;
+}
+
+/* company-panel-head 안 필터 버튼 active 상태 */
+.company-panel-head div button.active {
+  background: rgba(22,103,219,.45);
+  border-color: rgba(33,130,255,.7);
+  color: #fff;
+}
+
+/* 비교 결과 테이블 */
+.pdm-compare-panel { padding-bottom: 14px; }
+.pdm-compare-table { font-size: 13px; margin: 6px 12px 0; width: calc(100% - 24px); }
+.pdm-compare-table th { background: rgba(26,46,73,.54); color: #9fb2cb; text-align: center; }
+.pdm-compare-table td { text-align: center; }
+.pdm-mismatch-row td { background: rgba(245,184,75,.05); }
+.pdm-text-warn { color: #f5b84b !important; }
+.pdm-mono { font-family: "Cascadia Code", "Consolas", monospace; letter-spacing: .02em; }
+
+.pdm-lane-chip {
+  display: inline-grid;
+  place-items: center;
+  height: 20px;
+  padding: 0 8px;
+  border-radius: 4px;
+  background: rgba(19,92,178,.5);
+  color: #f3f9ff;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* ── Light mode 오버라이드 ──────────────────────────────────── */
+.light-mode .pdm-kpi-card {
+  background: rgba(255,255,255,.82);
+  border-color: rgba(58,126,204,.3);
+  box-shadow: 0 12px 30px rgba(49,91,137,.12);
+}
+.light-mode .pdm-kpi-card span { color: #53677f; }
+.light-mode .pdm-kpi-card strong { color: #102033; }
+
+.light-mode .pdm-cam-title b  { color: #102033; }
+.light-mode .pdm-cam-title span { color: #53677f; }
+.light-mode .pdm-metric-row span { color: #53677f; }
+.light-mode .pdm-metric-row b    { color: #21364d; }
+.light-mode .pdm-cam-reason p   { color: #21364d; }
+.light-mode .pdm-cam-reason span { color: #53677f; }
+.light-mode .pdm-alert-body b   { color: #102033; }
+.light-mode .pdm-alert-body span,
+.light-mode .pdm-alert-body em  { color: #53677f; }
+.light-mode .pdm-mini-bar-wrap,
+.light-mode .pdm-score-track    { background: rgba(58,126,204,.12); }
+.light-mode .pdm-css-gauge-track { stroke: rgba(58,126,204,.12); }
+.light-mode .pdm-css-gauge strong { color: #21364d; }
+.light-mode .pdm-css-gauge span { color: #53677f; }
+.light-mode .pdm-css-gauge.pdm-ok strong { color: #4cdf66; }
+.light-mode .pdm-css-gauge.pdm-warn strong { color: #f5b84b; }
+.light-mode .pdm-css-gauge.pdm-danger strong { color: #ef5a54; }
+.light-mode .pdm-score-bar-row b { color: #21364d; }
+.light-mode .pdm-score-bar-track { background: rgba(58,126,204,.12); }
+.light-mode .pdm-compare-table th { background: #e5eef9; color: #53677f; }
+.light-mode .pdm-compare-table td { color: #21364d; }
+.light-mode .pdm-mismatch-row td  { background: rgba(245,184,75,.08); }
+.light-mode .pdm-lane-chip         { background: #dcecff; color: #0f4f9b; }
+.light-mode .pdm-alert-meta time   { color: #6a8199; }
+
+/* ── Master Admin 라이트모드 호환 (master-shell.light) ──────── */
+.master-shell.light .pdm-kpi-card {
+  background: rgba(255,255,255,.82);
+  border-color: rgba(58,126,204,.3);
+  box-shadow: 0 12px 30px rgba(49,91,137,.12);
+}
+.master-shell.light .pdm-kpi-card span  { color: #53677f; }
+.master-shell.light .pdm-kpi-card strong { color: #102033; }
+.master-shell.light .pdm-cam-title b    { color: #102033; }
+.master-shell.light .pdm-cam-title span  { color: #53677f; }
+.master-shell.light .pdm-metric-row span { color: #53677f; }
+.master-shell.light .pdm-metric-row b   { color: #21364d; }
+.master-shell.light .pdm-cam-reason p   { color: #21364d; }
+.master-shell.light .pdm-cam-reason span { color: #53677f; }
+.master-shell.light .pdm-alert-body b   { color: #102033; }
+.master-shell.light .pdm-alert-body span,
+.master-shell.light .pdm-alert-body em  { color: #53677f; }
+.master-shell.light .pdm-mini-bar-wrap,
+.master-shell.light .pdm-score-track    { background: rgba(58,126,204,.12); }
+.master-shell.light .pdm-css-gauge-track { stroke: rgba(58,126,204,.12); }
+.master-shell.light .pdm-css-gauge strong { color: #21364d; }
+.master-shell.light .pdm-css-gauge span { color: #53677f; }
+.master-shell.light .pdm-css-gauge.pdm-ok strong { color: #4cdf66; }
+.master-shell.light .pdm-css-gauge.pdm-warn strong { color: #f5b84b; }
+.master-shell.light .pdm-css-gauge.pdm-danger strong { color: #ef5a54; }
+.master-shell.light .pdm-score-bar-row b { color: #21364d; }
+.master-shell.light .pdm-score-bar-track { background: rgba(58,126,204,.12); }
+.master-shell.light .pdm-compare-table th { background: #e5eef9; color: #53677f; }
+.master-shell.light .pdm-compare-table td { color: #21364d; }
+.master-shell.light .pdm-mismatch-row td  { background: rgba(245,184,75,.08); }
+.master-shell.light .pdm-lane-chip        { background: #dcecff; color: #0f4f9b; }
+.master-shell.light .pdm-alert-meta time  { color: #6a8199; }
+.master-shell.light .pdm-section-title   { color: #21364d; }

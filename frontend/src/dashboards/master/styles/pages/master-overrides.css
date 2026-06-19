@@ -1,0 +1,3047 @@
+.backend-db-page .flow-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-width: 0;
+  height: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  color: #dce9f8;
+  background: transparent;
+  box-shadow: none;
+}
+
+.backend-db-page .flow-legend span::before {
+  flex: 0 0 10px;
+  margin-right: 0;
+}
+
+.master-shell.light .backend-db-page .flow-legend span {
+  color: #6B7280;
+}
+
+.postgres-status li.wide-value {
+  grid-template-columns: 1fr minmax(160px, auto);
+}
+
+.postgres-status li.wide-value strong {
+  grid-column: 2 / -1;
+  justify-self: stretch;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.backend-errors .db-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  min-width: max-content;
+  padding: 0 10px;
+  white-space: nowrap;
+}
+
+.backend-errors .backend-db-table td:last-child {
+  text-align: center;
+}
+
+.topbar {
+  position: relative;
+}
+
+.header-tools .clock {
+  position: static;
+  left: auto;
+  transform: none;
+  flex: 0 0 170px;
+  min-width: 170px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.topbar {
+  overflow: hidden;
+}
+
+.topbar-title {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.topbar-title strong,
+.topbar-title span:not(.brand-diamond) {
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.header-tools {
+  min-width: max-content;
+  flex: 0 0 auto;
+}
+
+.header-tools > * {
+  flex-shrink: 0;
+}
+
+.dashboard-pipeline-table {
+  table-layout: fixed;
+}
+
+.dashboard-pipeline-table td {
+  padding: 0 8px;
+  text-align: center;
+}
+
+.pipeline-table-icon {
+  width: 46px;
+}
+
+.pipeline-table-name {
+  width: 72px;
+}
+
+.dashboard-pipeline-table td:nth-child(4),
+.dashboard-pipeline-table tr:not(:first-child) td:nth-child(2):not(.pipeline-table-name) {
+  text-align: center;
+}
+
+.pipeline-spark {
+  width: 72px;
+  min-width: 72px;
+}
+
+.pipeline-spark .chart-js-panel {
+  width: 64px;
+  margin: 0 auto;
+}
+
+.pipeline-table-state {
+  width: 132px;
+}
+
+.pipeline-table-state b {
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+.pipeline-table-state span {
+  font-size: 13px;
+}
+
+.alert-list li {
+  grid-template-columns: 68px minmax(0, 1fr) 62px;
+  min-height: 34px;
+}
+
+.alert-list b {
+  width: 50px;
+  padding: 4px 6px;
+  font-size: 11px;
+}
+
+.alert-list span {
+  font-size: 12px;
+}
+
+.alert-list time {
+  font-size: 11px;
+}
+
+.system-donut-chart {
+  position: relative;
+  width: 138px;
+  height: 138px;
+  display: block;
+  background: transparent;
+  box-shadow: none;
+  border: 0;
+  border-radius: 0;
+}
+
+.system-donut-chart .chart-js-panel {
+  position: absolute;
+  inset: 0;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+}
+
+.system-donut-chart canvas {
+  background: transparent !important;
+}
+
+.system-donut-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  text-align: center;
+  pointer-events: none;
+}
+
+.system-donut-center strong,
+.system-donut-center span {
+  position: static;
+  margin: 0;
+  line-height: 1.05;
+}
+
+.system-donut-center strong {
+  font-size: 28px;
+}
+
+.system-donut-center span {
+  margin-top: 1px;
+  font-size: 12px;
+  color: #b8c9de;
+}
+
+.metric-chart .chart-js-panel,
+.ingress-chart-grid .chart-js-panel,
+.timeline-board .chart-js-panel,
+.company-permission-summary .chart-js-panel {
+  width: 100%;
+}
+
+.company-permission-summary {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+}
+
+.company-permission-summary h3 {
+  margin-bottom: 0;
+  font-size: 15px;
+}
+
+.metric-chart > .chart-js-panel {
+  margin-top: 24px;
+}
+
+.timeline-board.chart-timeline {
+  padding: 0 8px;
+}
+
+.company-permission-summary .permission-stat-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 5px;
+  margin: 0;
+}
+
+.company-permission-summary .permission-stat-cards span {
+  min-height: 38px;
+  padding: 5px;
+  align-content: center;
+  gap: 2px;
+}
+
+.company-permission-summary .permission-stat-cards strong {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.company-permission-summary .permission-stat-cards b {
+  font-size: 9px;
+  line-height: 1;
+}
+
+.company-permission-summary .permission-mini-chart {
+  display: block;
+  height: 76px;
+  min-height: 76px;
+  padding: 2px 0 0;
+  border-top: 1px solid rgba(117, 151, 194, 0.12);
+}
+
+.audit-risk-card h3 {
+  margin-bottom: 10px;
+}
+
+.audit-risk-score {
+  min-height: 54px !important;
+  margin-bottom: 10px !important;
+  padding: 8px 10px;
+}
+
+.audit-risk-score strong {
+  font-size: 22px !important;
+}
+
+.audit-risk-score span {
+  font-size: 11px !important;
+}
+
+/* ============================================================
+ * 전역: 셸 최소 너비 해제 — master-dashboard-page.css의
+ * min-width: 1440px 을 덮어써 가로 스크롤을 방지한다.
+ * master-overrides.css 가 마지막으로 import되므로 항상 우선.
+ * ============================================================ */
+.master-shell {
+  min-width: 0;
+}
+
+/* 지점/설정 변경 이력 버튼 — absolute 겹침 해소, 표 하단으로 */
+.branch-history {
+  display: flex;
+  flex-direction: column;
+}
+
+.branch-history button {
+  position: static;
+  align-self: flex-end;
+  margin-top: 12px;
+}
+
+/* 테이블 패널은 내부 스크롤로 처리해 페이지 레이아웃을 보호 */
+.company-list-panel,
+.audit-list-panel,
+.edge-list-panel,
+.incident-list-panel {
+  overflow-x: auto;
+}
+
+/* 요청/처리 흐름 — 카드 높이 통일 + 4등분 (아이콘/타이틀/도넛/설명) */
+.flow-chain {
+  align-items: stretch;
+}
+
+.flow-chain div {
+  grid-template-rows: repeat(4, minmax(0, 1fr));
+  align-content: stretch;
+  min-height: 0;
+  height: 100%;
+  padding: 8px;
+}
+
+.flow-chain div > i,
+.flow-chain div > strong,
+.flow-chain div > b,
+.flow-chain div > span {
+  align-self: center;
+  justify-self: center;
+}
+
+/* Spring Boot 서비스 상태 — 서비스 컬럼 내용만 좌측 정렬 */
+.spring-service .backend-db-table td:first-child {
+  text-align: left;
+}
+
+/* 센터 목록 테이블 — 헤더·셀 전체 가운데 정렬 */
+.company-admin-table th,
+.company-admin-table td {
+  text-align: center;
+}
+
+/* 마지막 열(td:last-child)은 display:flex 이므로 justify-content로 가운데 정렬 */
+.company-admin-table td:last-child {
+  justify-content: center;
+}
+
+/* ============================================================
+ * 전역 테이블 헤더 통일 — company-admin-table th 기준
+ * height:34px · color:#a9bad0 · bg:rgba(28,49,77,.58) · fw:600 · 12px
+ * ============================================================ */
+.company-admin-table th,
+.audit-log-table th,
+.backend-db-table th,
+.edge-table th,
+.incident-table th,
+.incident-history-table th,
+.ingress-table th,
+.system-alert-table th,
+.branch-table th,
+.settings-table th,
+.control-table th,
+.member-table th,
+.live-center-table th,
+.audit-mini-table th {
+  height: 34px;
+  color: #a9bad0;
+  background: rgba(28, 49, 77, 0.58);
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.company-admin-table td,
+.audit-log-table td,
+.backend-db-table td,
+.edge-table td,
+.incident-table td,
+.incident-history-table td,
+.ingress-table td,
+.system-alert-table td,
+.branch-table td,
+.settings-table td,
+.control-table td,
+.member-table td,
+.live-center-table td,
+.audit-mini-table td {
+  text-align: center;
+}
+
+/* ============================================================
+ * 전역 패널 헤드 — 파란 좌측 바 통일 (대시보드 .panel-title 기준)
+ * border-left: 2px solid #1683ff  /  padding-left: 10px
+ * ============================================================ */
+
+/* 래퍼 div 형태의 패널 헤드 */
+.audit-panel-head,
+.branch-panel-head,
+.company-panel-head,
+.edge-detail-head,
+.incident-detail-head,
+.settings-panel-head,
+.system-panel-title {
+  padding-left: 10px;
+  border-left: 2px solid #1683ff;
+}
+
+/* Edge Fleet 요약 — grid stretch로 title div 높이가 늘어나는 현상 방지 */
+.edge-summary .system-panel-title {
+  align-self: start;
+}
+
+/* 래퍼 없이 article 직계 h3만 있는 패널 헤드 */
+.system-panel.pipeline-panel h3,
+.incident-timeline > h3,
+.branch-devices > h3,
+.branch-history > h3,
+.edge-list-panel > h3,
+.metric-chart > h3,
+.backend-db-panel > h3,
+.company-link-card > h3 {
+  margin-bottom: 11px;
+}
+
+.company-link-card > h3,
+.company-permission-summary > h3,
+.ingress-info-panel > h3,
+.audit-risk-card > h3,
+.settings-security > h3,
+.settings-notification > h3,
+.settings-backup > h3 {
+  padding-left: 10px;
+  border-left: 2px solid #1683ff;
+}
+
+.audit-type-card > h3 {
+  padding-left: 10px;
+  border-left: 2px solid #1683ff;
+  margin-bottom: 14px;
+}
+
+/* 최근 Ingress 오류 / 시스템 알림 테이블 — 폰트 사이즈 통일(12px) */
+.ingress-error-panel .ingress-table,
+.system-alert-table table {
+  font-size: 12px;
+}
+
+.ingress-error-panel .ingress-table td,
+.ingress-error-panel .ingress-table td * {
+  font-weight: 400;
+}
+
+/* 장애 알림 최근 조치 내역 — 마지막 열 right 정렬 해제 후 가운데 정렬 */
+.incident-history-table td:last-child {
+  text-align: center;
+}
+
+/* ============================================================
+ * 전역 뱃지 좌우 여백 — 텍스트 길이와 무관하게 padding 보장
+ * min-width 만으로는 긴 텍스트에 여백이 사라지므로 padding 추가
+ * (.db-badge 는 master-overrides.css 상단에서 이미 처리됨)
+ * ============================================================ */
+.edge-badge,
+.company-state,
+.sys-badge,
+.ingress-badge,
+.audit-badge,
+.branch-badge,
+.incident-badge,
+.settings-badge,
+.status,
+.center-modal-status {
+  padding: 0 8px;
+}
+
+/* ============================================================
+ * 반응형: ≤ 1440 px  (HD 14-15" 노트북, Retina 2880×1800)
+ * 모든 페이지의 2-3컬럼 그리드에서 큰 min-width 값 제거
+ * ============================================================ */
+@media (max-width: 1440px) {
+  .master-shell {
+    grid-template-columns: 200px 1fr;
+  }
+
+  /* 대시보드: map(700px) + side(560px) = 1260px 최솟값 제거 */
+  .master-overview-grid.dashboard-grid {
+    grid-template-columns: minmax(0, 1.08fr) minmax(440px, 0.92fr);
+  }
+
+  .master-overview-grid > .right-column {
+    min-height: 0;
+  }
+
+  .dashboard-lower-panels {
+    grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+  }
+
+  /* 센터 관리: 760px 최솟값 제거 */
+  .company-admin-main-grid {
+    grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.7fr);
+  }
+
+  /* 감사 로그: 760px 최솟값 제거 */
+  .audit-main-grid {
+    grid-template-columns: minmax(0, 1.28fr) minmax(300px, 0.72fr);
+  }
+
+  /* 지점 관리: 670+470px = 1140px 최솟값 제거 */
+  .branch-main-grid {
+    grid-template-columns: minmax(0, 1.28fr) minmax(360px, 0.72fr);
+  }
+
+  /* Edge 장비: 760px 최솟값 제거 */
+  .edge-main-grid {
+    grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
+  }
+
+  /* 장애 알림: 680px 최솟값 제거 */
+  .incident-main-grid,
+  .incident-bottom-grid {
+    grid-template-columns: minmax(0, 1.12fr) minmax(360px, 0.88fr);
+  }
+
+  /* Ingress: 290+420+510px = 1220px 최솟값 제거 */
+  .ingress-main-grid {
+    grid-template-columns: minmax(0, 0.72fr) minmax(0, 0.92fr) minmax(0, 1.18fr);
+  }
+
+  /* 백엔드/DB: 370+470+340px = 1180px 최솟값 제거 */
+  .backend-db-main-grid {
+    grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr) minmax(0, 0.85fr);
+  }
+}
+
+/* ============================================================
+ * 반응형: 1200 – 1279 px  (FHD 13-14" 소형 노트북)
+ * KPI 그리드 컬럼 수 축소, 사이드바/필터행 추가 압축
+ * ============================================================ */
+@media (max-width: 1279px) {
+  .master-shell {
+    grid-template-columns: 180px 1fr;
+  }
+
+  .sidebar {
+    padding: 14px 10px 10px;
+  }
+
+  .nav-main {
+    height: 40px;
+    font-size: 13.5px;
+    padding: 0 10px;
+  }
+
+  .quick-menu button {
+    font-size: 13px;
+  }
+
+  /* 6컬럼 KPI 그리드 → 3컬럼 2행으로 전환 */
+  .company-admin-kpi-grid,
+  .system-kpi-grid,
+  .ingress-kpi-grid,
+  .edge-kpi-grid,
+  .backend-db-kpi-grid,
+  .incident-kpi-grid,
+  .audit-kpi-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  /* 대시보드 우측 패널 최솟값 축소 */
+  .master-overview-grid.dashboard-grid {
+    grid-template-columns: minmax(0, 1.08fr) minmax(380px, 0.92fr);
+  }
+
+  /* 센터 관리: 필터행 및 사이드 패널 압축 */
+  .company-admin-filter-row {
+    grid-template-columns: 110px 100px 100px 130px 1fr 100px;
+    gap: 8px;
+  }
+
+  .company-admin-main-grid {
+    grid-template-columns: minmax(0, 1.35fr) minmax(240px, 0.55fr);
+  }
+
+  .company-admin-bottom-grid {
+    grid-template-columns: minmax(220px, 310px) 1fr;
+  }
+
+  /* 감사 로그: 사이드 패널 압축 */
+  .audit-main-grid {
+    grid-template-columns: minmax(0, 1.3fr) minmax(260px, 0.7fr);
+  }
+
+  .audit-bottom-grid {
+    grid-template-columns: minmax(260px, 320px) 1fr;
+  }
+
+  /* 지점 관리: 필터행 압축 */
+  .branch-filter-row {
+    grid-template-columns: 150px 150px 150px 1fr 80px;
+  }
+
+  .branch-main-grid {
+    grid-template-columns: minmax(0, 1.28fr) minmax(320px, 0.72fr);
+  }
+
+  /* Edge 장비: 필터행 압축 + 차트 5컬럼 → 3컬럼 */
+  .edge-filter-row {
+    grid-template-columns: repeat(3, 100px) 1fr 80px;
+    gap: 6px;
+  }
+
+  .edge-main-grid {
+    grid-template-columns: minmax(0, 1.35fr) minmax(270px, 0.65fr);
+  }
+
+  .edge-chart-row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  /* 시스템 관제: 파이프라인 플로우 5컬럼 → 3컬럼 */
+  .pipeline-flow {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  /* 장애 알림: 사이드 패널 압축 */
+  .incident-main-grid,
+  .incident-bottom-grid {
+    grid-template-columns: minmax(0, 1.12fr) minmax(310px, 0.88fr);
+  }
+}
+
+/* ============================================================
+ * 전역 KPI 아이콘 원형 — 통일 중립 다크 블루
+ * ============================================================ */
+.master-kpi-grid .kpi-icon,
+.system-kpi i,
+.ingress-kpi i,
+.company-admin-kpi i,
+.backend-db-kpi i,
+.edge-kpi i,
+.incident-kpi i,
+.settings-kpi i,
+.audit-kpi i {
+  background: rgba(28, 60, 110, 0.72) !important;
+  box-shadow: none !important;
+  color: #fff !important;
+}
+
+/* 대시보드 KPI img 아이콘: 흰색 필터 */
+.master-kpi-grid .kpi-icon img {
+  display: block;
+  filter: brightness(0) invert(1);
+}
+
+/* 라이트모드: 원형 배경 및 img 필터 조정 */
+.master-shell.light .master-kpi-grid .kpi-icon,
+.master-shell.light .system-kpi i,
+.master-shell.light .ingress-kpi i,
+.master-shell.light .company-admin-kpi i,
+.master-shell.light .backend-db-kpi i,
+.master-shell.light .edge-kpi i,
+.master-shell.light .incident-kpi i,
+.master-shell.light .settings-kpi i,
+.master-shell.light .audit-kpi i {
+  background: rgba(255, 255, 255, 0.22) !important;
+  box-shadow: none !important;
+}
+
+.master-shell.light .master-kpi-grid .kpi-icon img {
+  filter: none;
+}
+
+/* 라이트모드: 지도 배경 이미지 강제 적용 */
+.master-shell.light .map-panel {
+  background: url('/korea_road_backmap_light.png') center / 100% 100% no-repeat #F3F4F6 !important;
+}
+.master-shell.light .map-panel::before {
+  display: none !important;
+}
+.master-shell.light .branch-map-stage {
+  background: url('/korea_road_backmap_light.png') center / 100% 100% no-repeat #F3F4F6 !important;
+}
+.master-shell.light .branch-map-stage::after {
+  display: none !important;
+}
+
+/* ============================================================
+ * 라이트모드: 전역 테이블 헤더
+ * ============================================================ */
+.master-shell.light .company-admin-table th,
+.master-shell.light .audit-log-table th,
+.master-shell.light .backend-db-table th,
+.master-shell.light .edge-table th,
+.master-shell.light .incident-table th,
+.master-shell.light .incident-history-table th,
+.master-shell.light .ingress-table th,
+.master-shell.light .system-alert-table th,
+.master-shell.light .branch-table th,
+.master-shell.light .settings-table th,
+.master-shell.light .live-center-table th,
+.master-shell.light .audit-mini-table th {
+  color: #6B7280;
+  background: #E5E7EB;
+}
+
+/* 라이트모드: 전역 테이블 td */
+.master-shell.light .company-admin-table td,
+.master-shell.light .audit-log-table td,
+.master-shell.light .backend-db-table td,
+.master-shell.light .edge-table td,
+.master-shell.light .incident-table td,
+.master-shell.light .incident-history-table td,
+.master-shell.light .ingress-table td,
+.master-shell.light .system-alert-table td,
+.master-shell.light .branch-table td,
+.master-shell.light .settings-table td,
+.master-shell.light .live-center-table td,
+.master-shell.light .audit-mini-table td {
+  color: #111827;
+  background: #FAFAFA;
+  border-color: #D1D5DB;
+}
+
+/* 라이트모드: 행 hover */
+.master-shell.light .company-admin-table tbody tr:hover td,
+.master-shell.light .audit-log-table tbody tr:hover td,
+.master-shell.light .backend-db-table tbody tr:hover td,
+.master-shell.light .edge-table tbody tr:hover td,
+.master-shell.light .incident-table tbody tr:hover td,
+.master-shell.light .branch-table tbody tr:hover td,
+.master-shell.light .ingress-table tbody tr:hover td {
+  background: #FFFFFF;
+}
+
+/* ============================================================
+ * 라이트모드: KPI 카드 블루 배경
+ * ============================================================ */
+.master-shell.light .kpi.glass {
+  background: linear-gradient(135deg, #3b82f6, #2563EB) !important;
+  border-color: rgba(37, 99, 235, 0.4) !important;
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.25) !important;
+}
+
+.master-shell.light .kpi p {
+  color: rgba(255, 255, 255, 0.80) !important;
+}
+
+.master-shell.light .kpi strong {
+  color: #ffffff !important;
+}
+
+.master-shell.light .kpi em {
+  color: #a7f3d0 !important;
+}
+
+.master-shell.light .kpi em.down {
+  color: #fca5a5 !important;
+}
+
+/* ============================================================
+ * 라이트모드 서브페이지 팔레트 통일
+ * 구형 rgba(255,255,255,.84)/rgba(58,126,204,.3)/#102033/#53677f 값 전체 교체
+ * ============================================================ */
+
+/* KPI 카드 & 패널 컨테이너 */
+.master-shell.light .audit-kpi,
+.master-shell.light .audit-panel,
+.master-shell.light .company-admin-kpi,
+.master-shell.light .company-admin-panel,
+.master-shell.light .backend-db-kpi,
+.master-shell.light .backend-db-panel,
+.master-shell.light .edge-kpi,
+.master-shell.light .edge-panel,
+.master-shell.light .incident-kpi,
+.master-shell.light .incident-panel,
+.master-shell.light .ingress-kpi,
+.master-shell.light .ingress-panel,
+.master-shell.light .settings-kpi,
+.master-shell.light .settings-panel,
+.master-shell.light .system-kpi,
+.master-shell.light .system-panel {
+  background: #FAFAFA !important;
+  border-color: #D1D5DB !important;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06) !important;
+}
+
+/* 필터 행 버튼·레이블 */
+.master-shell.light .audit-filter-row button,
+.master-shell.light .audit-filter-row label,
+.master-shell.light .company-admin-filter-row button,
+.master-shell.light .company-admin-filter-row label,
+.master-shell.light .edge-filter-row button,
+.master-shell.light .edge-filter-row label,
+.master-shell.light .edge-pagination button,
+.master-shell.light .edge-actions button {
+  background: #FAFAFA !important;
+  border-color: #D1D5DB !important;
+  color: #374151 !important;
+  box-shadow: none !important;
+}
+
+/* 주요 텍스트: #102033 → #111827 */
+.master-shell.light .audit-kpi strong,
+.master-shell.light .audit-panel h3,
+.master-shell.light .audit-panel-head h3,
+.master-shell.light .audit-detail-card dd,
+.master-shell.light .audit-bars em,
+.master-shell.light .company-admin-kpi strong,
+.master-shell.light .company-panel-head h3,
+.master-shell.light .company-admin-panel h3,
+.master-shell.light .company-detail-card dd,
+.master-shell.light .company-permission-summary strong,
+.master-shell.light .backend-db-kpi strong,
+.master-shell.light .backend-db-panel h3,
+.master-shell.light .postgres-status li,
+.master-shell.light .postgres-status li strong,
+.master-shell.light .flow-chain strong,
+.master-shell.light .edge-panel h3,
+.master-shell.light .edge-kpi strong,
+.master-shell.light .edge-detail-list dd,
+.master-shell.light .edge-live-grid strong,
+.master-shell.light .metric-chart > strong,
+.master-shell.light .incident-panel h3,
+.master-shell.light .incident-kpi strong,
+.master-shell.light .incident-detail-panel h2,
+.master-shell.light .incident-related-grid strong,
+.master-shell.light .ingress-panel h3,
+.master-shell.light .ingress-panel-title h3,
+.master-shell.light .ingress-kpi strong,
+.master-shell.light .ingress-chart-grid h4,
+.master-shell.light .ingress-info-list strong,
+.master-shell.light .ingress-info-panel footer b,
+.master-shell.light .settings-kpi strong,
+.master-shell.light .settings-panel h3,
+.master-shell.light .settings-panel-head h3,
+.master-shell.light .settings-form-grid span,
+.master-shell.light .settings-security b,
+.master-shell.light .settings-backup dd,
+.master-shell.light .settings-notification b,
+.master-shell.light .system-kpi strong,
+.master-shell.light .system-panel h3,
+.master-shell.light .system-panel-title h3,
+.master-shell.light .pipeline-node h4,
+.master-shell.light .pipeline-node dt,
+.master-shell.light .pipeline-node dd,
+.master-shell.light .edge-metrics strong,
+.master-shell.light .ingress-mini-grid strong,
+.master-shell.light .backend-mini-grid strong,
+.master-shell.light .system-donut strong,
+.master-shell.light .forward-result,
+.master-shell.light .donut-wrap h4 {
+  color: #111827 !important;
+}
+
+/* 보조 텍스트: #53677f → #6B7280 */
+.master-shell.light .audit-kpi span,
+.master-shell.light .audit-kpi small,
+.master-shell.light .audit-detail-card dt,
+.master-shell.light .audit-panel-head h3 small,
+.master-shell.light .audit-risk-score span,
+.master-shell.light .company-admin-kpi span,
+.master-shell.light .company-admin-kpi small,
+.master-shell.light .company-detail-card dt,
+.master-shell.light .company-panel-head h3 small,
+.master-shell.light .company-permission-summary b,
+.master-shell.light .backend-db-kpi span,
+.master-shell.light .backend-db-kpi small,
+.master-shell.light .flow-chain span,
+.master-shell.light .backend-db-panel-footer,
+.master-shell.light .edge-kpi span,
+.master-shell.light .edge-kpi small,
+.master-shell.light .edge-detail-list dt,
+.master-shell.light .edge-live-grid span,
+.master-shell.light .incident-kpi span,
+.master-shell.light .incident-kpi small,
+.master-shell.light .incident-related-grid span,
+.master-shell.light .incident-related-grid small,
+.master-shell.light .ingress-kpi span,
+.master-shell.light .ingress-panel-title small,
+.master-shell.light .ingress-info-list span,
+.master-shell.light .ingress-info-panel footer span,
+.master-shell.light .ingress-footnote,
+.master-shell.light .settings-kpi span,
+.master-shell.light .settings-kpi small,
+.master-shell.light .settings-form-grid small,
+.master-shell.light .settings-backup dt,
+.master-shell.light .settings-notification em,
+.master-shell.light .system-kpi span,
+.master-shell.light .system-kpi small,
+.master-shell.light .edge-metrics span,
+.master-shell.light .ingress-mini-grid span,
+.master-shell.light .backend-mini-grid span,
+.master-shell.light .system-donut span {
+  color: #6B7280 !important;
+}
+
+/* 서브 아이템 컨테이너: rgba(246,250,255,.86) → #F3F4F6 */
+.master-shell.light .audit-risk-card li,
+.master-shell.light .audit-bars span,
+.master-shell.light .company-link-card li,
+.master-shell.light .company-permission-summary span,
+.master-shell.light .flow-chain div,
+.master-shell.light .postgres-status ul,
+.master-shell.light .edge-live-grid div,
+.master-shell.light .incident-related-grid div,
+.master-shell.light .pipeline-node,
+.master-shell.light .edge-metrics div,
+.master-shell.light .ingress-mini-grid div,
+.master-shell.light .backend-mini-grid div,
+.master-shell.light .settings-form-grid label,
+.master-shell.light .settings-security li,
+.master-shell.light .settings-notification span {
+  background: #F3F4F6 !important;
+  border-color: #D1D5DB !important;
+}
+
+/* 도넛 인너 */
+.master-shell.light .system-donut {
+  box-shadow: inset 0 0 0 28px #F3F4F6 !important;
+}
+
+/* api-sync-strip (기존 라이트모드 오버라이드 없음) */
+.master-shell.light .api-sync-strip article {
+  background: #FAFAFA !important;
+  border-color: #D1D5DB !important;
+  color: #374151 !important;
+}
+.master-shell.light .api-sync-strip b {
+  color: #2563EB !important;
+}
+.master-shell.light .api-sync-strip span {
+  color: #111827 !important;
+}
+
+/* 서브페이지 KPI 아이콘 원: 흰 배경에서 보이도록 블루 그라디언트 */
+.master-shell.light .system-kpi i,
+.master-shell.light .ingress-kpi i,
+.master-shell.light .company-admin-kpi i,
+.master-shell.light .backend-db-kpi i,
+.master-shell.light .edge-kpi i,
+.master-shell.light .incident-kpi i,
+.master-shell.light .settings-kpi i,
+.master-shell.light .audit-kpi i {
+  background: linear-gradient(135deg, #3b82f6, #2563EB) !important;
+  color: #ffffff !important;
+}
+
+/* 서브페이지 KPI img 아이콘: 흰색으로 */
+.master-shell.light .system-kpi i img,
+.master-shell.light .ingress-kpi i img,
+.master-shell.light .company-admin-kpi i img,
+.master-shell.light .backend-db-kpi i img,
+.master-shell.light .edge-kpi i img,
+.master-shell.light .incident-kpi i img,
+.master-shell.light .settings-kpi i img,
+.master-shell.light .audit-kpi i img {
+  filter: brightness(0) invert(1) !important;
+}
+
+/* ============================================================
+ * 라이트모드: 다크 사이드바 네비게이션 강제 오버라이드
+ * .sidebar button (0,3,1) 광범위 규칙을 !important로 극복
+ * ============================================================ */
+
+.master-shell.light .sidebar .nav-main {
+  color: #e2e8f0 !important;
+  background: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+.master-shell.light .sidebar .nav-main:hover {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+  border-color: transparent !important;
+}
+.master-shell.light .sidebar .nav-main.active {
+  color: #ffffff !important;
+  background: rgba(37, 99, 235, 0.18) !important;
+  border: 1px solid rgba(37, 99, 235, 0.45) !important;
+  box-shadow: inset 0 0 16px rgba(37, 99, 235, 0.08) !important;
+}
+.master-shell.light .sidebar .nav-children button {
+  color: #94a3b8 !important;
+  background: transparent !important;
+  border-color: transparent !important;
+}
+.master-shell.light .sidebar .nav-children button:hover {
+  color: #cbd5e1 !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+}
+.master-shell.light .sidebar .nav-children button.active {
+  color: #e2e8f0 !important;
+}
+.master-shell.light .sidebar .nav-icon img {
+  filter: brightness(0) invert(0.65) !important;
+}
+.master-shell.light .sidebar .nav-main.active .nav-icon img,
+.master-shell.light .sidebar .nav-main:hover .nav-icon img {
+  filter: brightness(0) invert(1) !important;
+}
+.master-shell.light .sidebar .sidebar-brand strong {
+  color: #ffffff !important;
+}
+.master-shell.light .sidebar .sidebar-brand span {
+  color: #94a3b8 !important;
+}
+.master-shell.light .sidebar .home-btn,
+.master-shell.light .sidebar .logout-btn {
+  color: #94a3b8 !important;
+  background: transparent !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+.master-shell.light .sidebar .home-btn:hover,
+.master-shell.light .sidebar .logout-btn:hover {
+  color: #e2e8f0 !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+}
+.master-shell.light .sidebar .copyright {
+  color: #475569 !important;
+}
+.master-shell.light .sidebar .quick-menu {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  box-shadow: none !important;
+}
+.master-shell.light .sidebar .quick-menu p {
+  color: #64748b !important;
+}
+.master-shell.light .sidebar .quick-menu button {
+  color: #94a3b8 !important;
+  background: transparent !important;
+  border-color: transparent !important;
+}
+.master-shell.light .sidebar .quick-menu button:hover {
+  color: #e2e8f0 !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+}
+
+/* Light mode: system pipeline status icons should render black. */
+.master-shell.light .dashboard-pipeline-table .pipeline-table-icon {
+  color: #000000 !important;
+}
+
+.master-shell.light .dashboard-pipeline-table .pipeline-table-icon img,
+.master-shell.light .pipeline-panel .pipeline-node i img {
+  filter: brightness(0) saturate(100%) !important;
+}
+
+.master-shell.light .pipeline-panel .pipeline-node i {
+  color: #000000 !important;
+}
+
+/* Remove exposed page gutters around full-screen dashboards.
+   App.vue의 .dashboard-app-shell wrapper만 풀스크린을 책임지므로
+   html/body/#app 전역 룰은 두지 않는다. */
+
+.master-shell {
+  width: 100%;
+  min-width: 1440px;
+  min-height: 100%;
+  margin: 0;
+}
+
+/* Light mode: professional color system for the five admin dashboard KPI cards. */
+.master-shell.light .master-kpi-grid .kpi.glass {
+  background: linear-gradient(135deg, #eaf3ff 0%, #dbeafe 100%) !important;
+  border: 1px solid #9fc3ee !important;
+  box-shadow: 0 8px 20px rgba(31, 115, 190, 0.16) !important;
+}
+
+.master-shell.light .master-kpi-grid .kpi:nth-child(1) {
+  --kpi-tint: #eef5ff;
+  --kpi-border: #bfd6f5;
+  --kpi-icon-start: #3b82f6;
+  --kpi-icon-end: #1d4ed8;
+  --kpi-accent: #2563eb;
+}
+
+.master-shell.light .master-kpi-grid .kpi:nth-child(2) {
+  --kpi-tint: #ecfeff;
+  --kpi-border: #a7dfe8;
+  --kpi-icon-start: #22d3ee;
+  --kpi-icon-end: #0e7490;
+  --kpi-accent: #0e7490;
+}
+
+.master-shell.light .master-kpi-grid .kpi:nth-child(3) {
+  --kpi-tint: #ecfdf5;
+  --kpi-border: #a9e7c7;
+  --kpi-icon-start: #34d399;
+  --kpi-icon-end: #047857;
+  --kpi-accent: #047857;
+}
+
+.master-shell.light .master-kpi-grid .kpi:nth-child(4) {
+  --kpi-tint: #f1f5ff;
+  --kpi-border: #c7d2fe;
+  --kpi-icon-start: #818cf8;
+  --kpi-icon-end: #4338ca;
+  --kpi-accent: #4f46e5;
+}
+
+.master-shell.light .master-kpi-grid .kpi:nth-child(5) {
+  --kpi-tint: #fff7ed;
+  --kpi-border: #fed7aa;
+  --kpi-icon-start: #fb923c;
+  --kpi-icon-end: #c2410c;
+  --kpi-accent: #c2410c;
+}
+
+.master-shell.light .master-kpi-grid .kpi-icon {
+  color: #ffffff !important;
+  background: linear-gradient(135deg, var(--kpi-icon-start), var(--kpi-icon-end)) !important;
+  box-shadow: 0 8px 18px color-mix(in srgb, var(--kpi-icon-end) 28%, transparent) !important;
+}
+
+.master-shell.light .master-kpi-grid .kpi-icon img {
+  filter: brightness(0) invert(1) !important;
+}
+
+.master-shell.light .master-kpi-grid .kpi p {
+  color: #53657a !important;
+}
+
+.master-shell.light .master-kpi-grid .kpi strong {
+  color: #142235 !important;
+}
+
+.master-shell.light .master-kpi-grid .kpi em {
+  color: var(--kpi-accent) !important;
+  font-weight: 700;
+}
+
+.master-shell.light .master-kpi-grid .kpi em.down {
+  color: #b91c1c !important;
+}
+
+/* Light mode: align all admin subpage KPI cards with the dashboard KPI style. */
+.master-shell.light .company-admin-kpi,
+.master-shell.light .system-kpi,
+.master-shell.light .ingress-kpi,
+.master-shell.light .edge-kpi,
+.master-shell.light .backend-db-kpi,
+.master-shell.light .incident-kpi,
+.master-shell.light .settings-kpi,
+.master-shell.light .audit-kpi {
+  background: linear-gradient(135deg, #eaf3ff 0%, #dbeafe 100%) !important;
+  border: 1px solid #9fc3ee !important;
+  box-shadow: 0 8px 20px rgba(31, 115, 190, 0.16) !important;
+}
+
+.master-shell.light .company-admin-kpi strong,
+.master-shell.light .system-kpi strong,
+.master-shell.light .ingress-kpi strong,
+.master-shell.light .edge-kpi strong,
+.master-shell.light .backend-db-kpi strong,
+.master-shell.light .incident-kpi strong,
+.master-shell.light .settings-kpi strong,
+.master-shell.light .audit-kpi strong {
+  color: #142235 !important;
+}
+
+.master-shell.light .company-admin-kpi span,
+.master-shell.light .company-admin-kpi small,
+.master-shell.light .system-kpi span,
+.master-shell.light .system-kpi small,
+.master-shell.light .ingress-kpi span,
+.master-shell.light .ingress-kpi small,
+.master-shell.light .edge-kpi span,
+.master-shell.light .edge-kpi small,
+.master-shell.light .backend-db-kpi span,
+.master-shell.light .backend-db-kpi small,
+.master-shell.light .incident-kpi span,
+.master-shell.light .incident-kpi small,
+.master-shell.light .settings-kpi span,
+.master-shell.light .settings-kpi small,
+.master-shell.light .audit-kpi span,
+.master-shell.light .audit-kpi small {
+  color: #53657a !important;
+}
+
+.master-shell.light .company-admin-kpi i,
+.master-shell.light .system-kpi i,
+.master-shell.light .ingress-kpi i,
+.master-shell.light .edge-kpi i,
+.master-shell.light .backend-db-kpi i,
+.master-shell.light .incident-kpi i,
+.master-shell.light .settings-kpi i,
+.master-shell.light .audit-kpi i {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8) !important;
+  box-shadow: 0 8px 18px rgba(29, 78, 216, 0.28) !important;
+  color: #ffffff !important;
+}
+
+.master-shell.light .company-admin-kpi.ok i,
+.master-shell.light .system-kpi.ok i,
+.master-shell.light .ingress-kpi.alive i,
+.master-shell.light .edge-kpi.ok i,
+.master-shell.light .backend-db-kpi.ok i,
+.master-shell.light .incident-kpi.done i,
+.master-shell.light .settings-kpi.ok i,
+.master-shell.light .audit-kpi.ok i {
+  background: linear-gradient(135deg, #34d399, #047857) !important;
+  box-shadow: 0 8px 18px rgba(4, 120, 87, 0.26) !important;
+}
+
+.master-shell.light .company-admin-kpi.warn i,
+.master-shell.light .system-kpi.warn i,
+.master-shell.light .ingress-kpi.caution i,
+.master-shell.light .edge-kpi.warn i,
+.master-shell.light .backend-db-kpi.warn i,
+.master-shell.light .incident-kpi.warn i,
+.master-shell.light .settings-kpi.warn i,
+.master-shell.light .audit-kpi.warn i {
+  background: linear-gradient(135deg, #fbbf24, #b45309) !important;
+  box-shadow: 0 8px 18px rgba(180, 83, 9, 0.24) !important;
+}
+
+.master-shell.light .system-kpi.danger i,
+.master-shell.light .ingress-kpi.danger i,
+.master-shell.light .ingress-kpi.malformed i,
+.master-shell.light .edge-kpi.danger i,
+.master-shell.light .incident-kpi.danger i,
+.master-shell.light .audit-kpi.danger i {
+  background: linear-gradient(135deg, #fb7185, #be123c) !important;
+  box-shadow: 0 8px 18px rgba(190, 18, 60, 0.24) !important;
+}
+
+.master-shell.light .company-admin-kpi.muted i,
+.master-shell.light .backend-db-kpi.purple i,
+.master-shell.light .incident-kpi.action i,
+.master-shell.light .incident-kpi.info i,
+.master-shell.light .incident-kpi.time i {
+  background: linear-gradient(135deg, #818cf8, #4338ca) !important;
+  box-shadow: 0 8px 18px rgba(67, 56, 202, 0.24) !important;
+}
+
+.master-shell.light .company-admin-kpi i img,
+.master-shell.light .system-kpi i img,
+.master-shell.light .ingress-kpi i img,
+.master-shell.light .edge-kpi i img,
+.master-shell.light .backend-db-kpi i img,
+.master-shell.light .incident-kpi i img,
+.master-shell.light .settings-kpi i img,
+.master-shell.light .audit-kpi i img {
+  filter: brightness(0) invert(1) !important;
+}
+
+/* Pipeline state column: remove full-column fill and show state as compact badges. */
+.dashboard-pipeline-table .pipeline-table-state {
+  background: transparent !important;
+}
+
+.dashboard-pipeline-table .pipeline-table-state b {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: auto;
+  min-width: 0;
+  padding: 4px 9px;
+  border: 1px solid rgba(95, 224, 128, 0.28);
+  border-radius: 999px;
+  color: #65eb8a;
+  background: rgba(37, 204, 113, 0.10);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.dashboard-pipeline-table .pipeline-table-state b::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 0 3px rgba(95, 224, 128, 0.14);
+}
+
+.dashboard-pipeline-table .pipeline-table-state span {
+  display: block;
+  margin-top: 6px;
+  color: #a9bdd5;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.master-shell.light .dashboard-pipeline-table .pipeline-table-state {
+  background: transparent !important;
+}
+
+/* Light mode: system control body readability, excluding the top KPI cards. */
+.master-shell.light .system-control-page .pipeline-node i,
+.master-shell.light .system-control-page .edge-metrics i,
+.master-shell.light .system-control-page .ingress-mini-grid i,
+.master-shell.light .system-control-page .backend-mini-grid i {
+  border: 1px solid #78a7d5 !important;
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #2f80d0, #155a99) !important;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.24),
+    0 6px 14px rgba(21, 90, 153, 0.18) !important;
+}
+
+.master-shell.light .system-control-page .pipeline-node i img,
+.master-shell.light .system-control-page .edge-metrics i img,
+.master-shell.light .system-control-page .ingress-mini-grid i img,
+.master-shell.light .system-control-page .backend-mini-grid i img {
+  filter: brightness(0) invert(1) !important;
+}
+
+.master-shell.light .system-control-page .pipeline-node p {
+  color: #0f3558 !important;
+  background: #dceeff !important;
+  border-top: 1px solid #9fc3ee !important;
+  font-weight: 800;
+}
+
+.master-shell.light .system-control-page .pipeline-node p span {
+  background: #047857 !important;
+  box-shadow: 0 0 0 3px rgba(4, 120, 87, 0.14);
+}
+
+.master-shell.light .system-control-page .pipeline-node b {
+  color: #2f9b68 !important;
+}
+
+.master-shell.light .system-control-page .pipeline-node:not(:last-child)::after {
+  color: #0f5132 !important;
+  background: #6fcf97 !important;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.32),
+    0 4px 10px rgba(47, 155, 104, 0.16) !important;
+}
+
+.master-shell.light .system-control-page .pipeline-node:not(:last-child)::before {
+  background: linear-gradient(90deg, rgba(111, 207, 151, 0.30), rgba(47, 155, 104, 0.58)) !important;
+  box-shadow: 0 0 8px rgba(47, 155, 104, 0.12) !important;
+}
+
+.master-shell.light .system-control-page .edge-metrics span,
+.master-shell.light .system-control-page .ingress-mini-grid span,
+.master-shell.light .system-control-page .backend-mini-grid span {
+  color: #334155 !important;
+  font-weight: 800;
+}
+
+.master-shell.light .system-control-page .edge-metrics strong,
+.master-shell.light .system-control-page .ingress-mini-grid strong,
+.master-shell.light .system-control-page .backend-mini-grid strong {
+  color: #0f172a !important;
+  font-weight: 900;
+}
+
+.master-shell.light .system-control-page .edge-metrics small,
+.master-shell.light .system-control-page .ingress-mini-grid small,
+.master-shell.light .system-control-page .backend-mini-grid small {
+  color: #475569 !important;
+  font-weight: 700;
+}
+
+.master-shell.light .system-control-page .donut-wrap ul,
+.master-shell.light .system-control-page .donut-wrap li {
+  color: #1f3349 !important;
+  font-weight: 800;
+}
+
+.master-shell.light .system-control-page .donut-wrap li b {
+  box-shadow: 0 0 0 3px rgba(31, 73, 125, 0.08);
+}
+
+.master-shell.light .system-control-page .forward-result b {
+  color: #0f5132 !important;
+  background: #6fcf97 !important;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.32),
+    0 3px 8px rgba(47, 155, 104, 0.14) !important;
+}
+
+.master-shell.light .system-control-page .forward-result span {
+  color: #334155 !important;
+  font-weight: 800;
+}
+
+/* Light mode: Edge equipment page readability. */
+.master-shell.light .edge-page .metric-chart h3 {
+  color: #142235 !important;
+  font-weight: 900;
+}
+
+.master-shell.light .edge-page .metric-chart h3 small,
+.master-shell.light .edge-page .metric-chart > span {
+  color: #334155 !important;
+  font-weight: 800;
+}
+
+.master-shell.light .edge-page .metric-chart > span {
+  bottom: 8px;
+}
+
+.master-shell.light .edge-page .metric-chart .chart-js-panel {
+  margin-bottom: 14px;
+}
+
+.master-shell.light .edge-page .metric-chart > strong {
+  color: #0f172a !important;
+  font-weight: 900;
+}
+
+.master-shell.light .edge-page .metric-chart b {
+  border: 1px solid #8fc3a6 !important;
+  color: #2f7d55 !important;
+  background: #e5f4ec !important;
+  font-weight: 800;
+}
+
+.master-shell.light .edge-page .metric-chart b.warn {
+  border-color: #d7b45a !important;
+  color: #8a5a00 !important;
+  background: #fff2cc !important;
+}
+
+.master-shell.light .edge-page .edge-detail-head {
+  border-bottom: 0 !important;
+  padding-bottom: 4px;
+}
+
+.master-shell.light .edge-page .edge-detail-head span,
+.master-shell.light .edge-page .edge-badge.ok {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 24px;
+  padding: 0 10px;
+  border: 1px solid #8fc3a6 !important;
+  border-radius: 999px;
+  border-color: #8fc3a6 !important;
+  color: #2f7d55 !important;
+  background: #e5f4ec !important;
+  font-weight: 800 !important;
+}
+
+.master-shell.light .edge-page .edge-detail-list {
+  grid-template-columns: 92px minmax(0, 1fr);
+  margin: 12px 0 16px;
+}
+
+.master-shell.light .edge-page .edge-detail-list dt,
+.master-shell.light .edge-page .edge-detail-list dd {
+  min-height: 36px;
+  height: auto;
+  padding: 9px 8px;
+  line-height: 1.35;
+  border-bottom-color: #dce6f1 !important;
+}
+
+.master-shell.light .edge-page .edge-detail-list dt {
+  color: #334155 !important;
+  font-weight: 900;
+}
+
+.master-shell.light .edge-page .edge-detail-list dd {
+  color: #142235 !important;
+  font-weight: 700;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.master-shell.light .edge-page .edge-detail-list dd.ok {
+  color: #2f7d55 !important;
+  font-weight: 900;
+}
+
+.master-shell.light .edge-page .edge-live-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+}
+
+.master-shell.light .edge-page .edge-live-grid div {
+  min-height: 48px;
+  grid-template-columns: 28px minmax(0, 1fr) minmax(48px, auto);
+  grid-template-rows: auto;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 10px;
+  background: #f8fbff !important;
+  border-color: #b8cbe0 !important;
+}
+
+.master-shell.light .edge-page .edge-live-grid i {
+  width: 26px;
+  height: 26px;
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #2f80d0, #155a99) !important;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.24),
+    0 4px 10px rgba(21, 90, 153, 0.16) !important;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.master-shell.light .edge-page .edge-live-grid span {
+  color: #334155 !important;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.2;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.master-shell.light .edge-page .edge-live-grid strong {
+  color: #0f172a !important;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1.2;
+  text-align: right;
+  white-space: nowrap;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.master-shell.light .edge-page .edge-live-grid strong.danger {
+  color: #991b1b !important;
+}
+
+/* Light mode: Ingress monitoring page readability. */
+.master-shell.light .ingress-page .ingress-info-panel > h3,
+.master-shell.light .ingress-page .ingress-panel-title h3,
+.master-shell.light .ingress-page .ingress-chart-grid h4 {
+  color: #142235 !important;
+  font-weight: 900;
+}
+
+.master-shell.light .ingress-page .ingress-panel-title small {
+  color: #475569 !important;
+  font-weight: 800;
+}
+
+.master-shell.light .ingress-page .ingress-info-list span {
+  color: #475569 !important;
+  font-weight: 800;
+}
+
+.master-shell.light .ingress-page .ingress-info-list strong {
+  color: #0f172a !important;
+  font-weight: 900;
+}
+
+.master-shell.light .ingress-page .ingress-info-list b {
+  color: #155a99 !important;
+  font-weight: 800;
+}
+
+.master-shell.light .ingress-page .ingress-info-list em.ok {
+  border-color: #8fc3a6 !important;
+  color: #2f7d55 !important;
+  background: #e5f4ec !important;
+  font-weight: 900;
+}
+
+.master-shell.light .ingress-page .ingress-info-panel footer {
+  border-top-color: #c7d4e3 !important;
+}
+
+.master-shell.light .ingress-page .ingress-info-panel footer p {
+  border-right-color: #d7e3f0 !important;
+}
+
+.master-shell.light .ingress-page .ingress-info-panel footer span {
+  color: #475569 !important;
+  font-weight: 800;
+}
+
+.master-shell.light .ingress-page .ingress-info-panel footer b {
+  color: #0f172a !important;
+  font-weight: 900;
+}
+
+.master-shell.light .ingress-page .ingress-chart-grid section {
+  color: #142235;
+}
+
+/* Light mode: Backend / DB monitoring readability. */
+.master-shell.light .backend-db-page .backend-db-panel h3,
+.master-shell.light .backend-db-page .backend-db-panel h3 small {
+  color: #142235 !important;
+  font-weight: 900;
+}
+
+.master-shell.light .backend-db-page .backend-db-panel h3 small {
+  color: #475569 !important;
+  font-weight: 800;
+}
+
+.master-shell.light .backend-db-page .ok-dot {
+  color: #6fcf97 !important;
+  text-shadow: none !important;
+}
+
+.master-shell.light .backend-db-page .spring-service .backend-db-table td:first-child {
+  color: #142235 !important;
+  font-weight: 900;
+}
+
+.master-shell.light .backend-db-page .spring-service .backend-db-table td b:not(.db-badge) {
+  color: #2f7d55 !important;
+  font-weight: 900;
+}
+
+.master-shell.light .backend-db-page .flow-chain div {
+  background: #f8fbff !important;
+  border-color: #b8cbe0 !important;
+}
+
+.master-shell.light .backend-db-page .flow-chain div > i {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #7eaedb !important;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #dceeff, #b8d8f4) !important;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.6),
+    0 6px 14px rgba(21, 90, 153, 0.14) !important;
+}
+
+.master-shell.light .backend-db-page .flow-chain div > i img {
+  filter: brightness(0) saturate(100%) invert(30%) sepia(52%) saturate(1010%) hue-rotate(174deg) brightness(88%) contrast(89%) !important;
+}
+
+.master-shell.light .backend-db-page .flow-chain strong {
+  color: #142235 !important;
+  font-weight: 900;
+}
+
+.master-shell.light .backend-db-page .flow-chain b {
+  color: #0f5132 !important;
+  background: #6fcf97 !important;
+  box-shadow: 0 0 0 3px rgba(47, 155, 104, 0.12) !important;
+}
+
+.master-shell.light .backend-db-page .flow-chain span {
+  color: #475569 !important;
+  font-weight: 800;
+}
+
+.master-shell.light .backend-db-page .flow-chain div:not(:last-child)::after {
+  color: #7d95ad !important;
+}
+
+.master-shell.light .backend-db-page .flow-legend {
+  color: #334155 !important;
+  border-top-color: #c7d4e3 !important;
+}
+
+.master-shell.light .backend-db-page .flow-legend span,
+.master-shell.light .backend-db-page .flow-legend em {
+  color: #334155 !important;
+  font-weight: 800;
+}
+
+.master-shell.light .backend-db-page .flow-legend .ok::before {
+  background: #6fcf97 !important;
+}
+
+.master-shell.light .backend-db-page .postgres-status ul {
+  background: #f8fbff !important;
+  border-color: #b8cbe0 !important;
+}
+
+.master-shell.light .backend-db-page .postgres-status li {
+  color: #334155 !important;
+  border-bottom-color: #dce6f1 !important;
+  font-weight: 800;
+}
+
+.master-shell.light .backend-db-page .postgres-status li span {
+  color: #334155 !important;
+  font-weight: 800;
+}
+
+.master-shell.light .backend-db-page .postgres-status li span::before {
+  color: #9bb8d8 !important;
+}
+
+.master-shell.light .backend-db-page .postgres-status li strong {
+  color: #142235 !important;
+  font-weight: 900;
+}
+
+.master-shell.light .backend-db-page .postgres-status li b,
+.master-shell.light .backend-db-page .db-badge.ok {
+  border-color: #8fc3a6 !important;
+  color: #2f7d55 !important;
+  background: #e5f4ec !important;
+  font-weight: 900 !important;
+}
+
+.master-shell.light .backend-db-page .backend-db-panel-footer,
+.master-shell.light .backend-db-page .backend-db-panel-footer span {
+  color: #334155 !important;
+  font-weight: 800;
+}
+
+.master-shell.light .backend-db-page .backend-errors .backend-db-table td:nth-child(3) {
+  color: #334155 !important;
+  font-weight: 700;
+}
+
+/* Light mode: incident alert page readability. */
+.master-shell.light .incident-page .incident-panel h3,
+.master-shell.light .incident-page .incident-detail-head h3,
+.master-shell.light .incident-page .incident-detail-panel h2,
+.master-shell.light .incident-page .incident-timeline > h3,
+.master-shell.light .incident-page .incident-impact h4,
+.master-shell.light .incident-page .incident-actions-text h4 {
+  color: #142235 !important;
+  font-weight: 900;
+}
+
+.master-shell.light .incident-page .incident-kpi span,
+.master-shell.light .incident-page .incident-kpi small,
+.master-shell.light .incident-page .incident-panel h3 small,
+.master-shell.light .incident-page .incident-detail-head h3 small,
+.master-shell.light .incident-page .incident-filter-row label span {
+  color: #475569 !important;
+  font-weight: 800;
+}
+
+.master-shell.light .incident-page .incident-kpi strong,
+.master-shell.light .incident-page .incident-kpi strong em {
+  color: #0f172a !important;
+  font-weight: 900;
+}
+
+.master-shell.light .incident-page .incident-filter-row label,
+.master-shell.light .incident-page .incident-search {
+  color: #334155 !important;
+  background: #f8fbff !important;
+  border-color: #b8cbe0 !important;
+}
+
+.master-shell.light .incident-page .incident-filter-row select,
+.master-shell.light .incident-page .incident-search input {
+  color: #142235 !important;
+  font-weight: 800;
+}
+
+.master-shell.light .incident-page .incident-search input::placeholder {
+  color: #64748b !important;
+  opacity: 1;
+}
+
+.master-shell.light .incident-page .incident-table th,
+.master-shell.light .incident-page .incident-history-table th {
+  color: #334155 !important;
+  font-weight: 900 !important;
+}
+
+.master-shell.light .incident-page .incident-table td,
+.master-shell.light .incident-page .incident-history-table td {
+  color: #142235 !important;
+  font-weight: 700;
+}
+
+.master-shell.light .incident-page .incident-table tbody tr.selected td {
+  color: #0f172a !important;
+  background: #eaf3ff !important;
+}
+
+.master-shell.light .incident-page .incident-pagination > span,
+.master-shell.light .incident-page .incident-pagination button {
+  color: #1f3349 !important;
+  font-weight: 800 !important;
+}
+
+.master-shell.light .incident-page .incident-detail-grid dt {
+  color: #334155 !important;
+  font-weight: 900;
+}
+
+.master-shell.light .incident-page .incident-detail-grid dd {
+  color: #142235 !important;
+  font-weight: 800;
+}
+
+.master-shell.light .incident-page .incident-related-grid div {
+  background: #f8fbff !important;
+  border-color: #b8cbe0 !important;
+}
+
+.master-shell.light .incident-page .incident-related-grid span,
+.master-shell.light .incident-page .incident-related-grid small {
+  color: #475569 !important;
+  font-weight: 800;
+}
+
+.master-shell.light .incident-page .incident-related-grid strong {
+  color: #0f172a !important;
+  font-weight: 900;
+}
+
+.master-shell.light .incident-page .incident-impact p,
+.master-shell.light .incident-page .incident-actions-text li {
+  color: #142235 !important;
+  font-weight: 700;
+}
+
+.master-shell.light .incident-page .incident-impact p {
+  background: #fff7ed !important;
+  border-color: #f1c38b !important;
+}
+
+.master-shell.light .incident-page .incident-impact p i {
+  color: #92400e !important;
+  background: #fff0c7 !important;
+  border-color: #d59d2b !important;
+}
+
+.master-shell.light .incident-page .timeline-legend span,
+.master-shell.light .incident-page .timeline-labels span {
+  color: #334155 !important;
+  font-weight: 800;
+}
+
+.master-shell.light .incident-page .timeline-board {
+  min-height: 200px;
+  padding: 4px 10px 0;
+  border-left-color: #a8bdd5 !important;
+  background:
+    linear-gradient(rgba(150, 172, 198, 0.34) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(150, 172, 198, 0.32) 1px, transparent 1px) !important;
+  background-size: 100% 40px, 25% 100% !important;
+}
+
+.master-shell.light .incident-page .timeline-chart {
+  min-height: 200px;
+}
+
+.master-shell.light .incident-page .timeline-labels {
+  min-height: 200px;
+}
+
+.master-shell.light .incident-page .timeline-btn {
+  display: none;
+}
+
+.master-shell.light .incident-page .incident-badge {
+  font-weight: 900 !important;
+}
+
+.master-shell.light .incident-page .incident-badge.critical {
+  color: #991b1b !important;
+  background: #ffe4e4 !important;
+  border-color: #df8b8b !important;
+}
+
+.master-shell.light .incident-page .incident-badge.warn,
+.master-shell.light .incident-page .incident-badge.wait {
+  color: #92400e !important;
+  background: #fff0c7 !important;
+  border-color: #d59d2b !important;
+}
+
+.master-shell.light .incident-page .incident-badge.info,
+.master-shell.light .incident-page .incident-badge.action {
+  color: #155a99 !important;
+  background: #e3f0ff !important;
+  border-color: #8fb5dc !important;
+}
+
+.master-shell.light .incident-page .incident-badge.done {
+  color: #2f7d55 !important;
+  background: #e5f4ec !important;
+  border-color: #8fc3a6 !important;
+}
+
+/* Pipeline table column sizing: keep service titles inside the second column. */
+.dashboard-pipeline-table .pipeline-table-icon {
+  width: 44px !important;
+}
+
+.dashboard-pipeline-table .pipeline-table-name {
+  width: 96px !important;
+  min-width: 96px;
+  max-width: 96px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dashboard-pipeline-table td:nth-child(3) {
+  width: 108px;
+  max-width: 108px;
+}
+
+.dashboard-pipeline-table td:nth-child(4) {
+  width: 88px;
+  max-width: 88px;
+}
+
+.dashboard-pipeline-table .pipeline-spark {
+  width: 70px !important;
+  min-width: 70px;
+  max-width: 70px;
+}
+
+.dashboard-pipeline-table .pipeline-table-state {
+  width: 132px !important;
+  min-width: 132px;
+  max-width: 132px;
+}
+
+.dashboard-pipeline-table td:nth-child(3),
+.dashboard-pipeline-table td:nth-child(4) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.master-shell.light .dashboard-pipeline-table .pipeline-table-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Keep the divider between sparkline and state columns continuous across rowspans. */
+.dashboard-pipeline-table .pipeline-spark {
+  border-right: 0 !important;
+}
+
+.dashboard-pipeline-table .pipeline-table-state {
+  border-left: 1px solid rgba(117, 151, 194, 0.1) !important;
+}
+
+.master-shell.light .dashboard-pipeline-table .pipeline-spark {
+  border-right: 0 !important;
+}
+
+.master-shell.light .dashboard-pipeline-table .pipeline-table-state {
+  border-left: 1px solid #c3d2e4 !important;
+}
+
+/* Light mode: map markers and labels should communicate branch state. */
+.master-shell.light .map-marker.ok {
+  color: #059669 !important;
+  --marker-main: #059669;
+  --marker-soft: #f3faf6;
+  --marker-border: #b8d8c5;
+  --marker-text: #065f46;
+}
+
+.master-shell.light .map-marker.caution {
+  color: #d97706 !important;
+  --marker-main: #d97706;
+  --marker-soft: #fbf7ed;
+  --marker-border: #dec58f;
+  --marker-text: #92400e;
+}
+
+.master-shell.light .map-marker.danger {
+  color: #dc2626 !important;
+  --marker-main: #dc2626;
+  --marker-soft: #fbf3f3;
+  --marker-border: #e2b2b2;
+  --marker-text: #991b1b;
+}
+
+.master-shell.light .map-marker .pin {
+  background: var(--marker-main) !important;
+  border: 2px solid #ffffff !important;
+  box-shadow:
+    0 0 0 4px color-mix(in srgb, var(--marker-main) 18%, transparent),
+    0 4px 12px color-mix(in srgb, var(--marker-main) 42%, transparent) !important;
+}
+
+.master-shell.light .map-marker .marker-label {
+  color: var(--marker-text) !important;
+  background: color-mix(in srgb, var(--marker-soft) 72%, #ffffff) !important;
+  border-color: var(--marker-border) !important;
+  box-shadow: 0 8px 18px rgba(36, 60, 86, 0.12) !important;
+}
+
+.master-shell.light .map-marker .marker-label b {
+  color: #111827 !important;
+}
+
+.master-shell.light .map-marker .marker-label small {
+  color: var(--marker-main) !important;
+}
+
+.master-shell.light .map-marker.selected .marker-label {
+  border-color: var(--marker-main) !important;
+  box-shadow:
+    0 0 0 2px color-mix(in srgb, var(--marker-main) 20%, transparent),
+    0 10px 24px color-mix(in srgb, var(--marker-main) 20%, transparent) !important;
+}
+
+/* Light mode: unify member company management pages with the dashboard visual system. */
+.master-shell.light .company-admin-page,
+.master-shell.light .subpage-panel {
+  color: #142235;
+}
+
+.master-shell.light .company-admin-panel,
+.master-shell.light .subpage-panel {
+  background: #f8fbff !important;
+  border: 1px solid #9fb7d2 !important;
+  box-shadow: 0 10px 24px rgba(31, 73, 125, 0.14) !important;
+  backdrop-filter: none !important;
+}
+
+.master-shell.light .company-panel-head,
+.master-shell.light .subpage-toolbar {
+  color: #142235;
+}
+
+.master-shell.light .company-panel-head h3,
+.master-shell.light .company-admin-panel h3,
+.master-shell.light .subpage-toolbar h3 {
+  color: #142235 !important;
+  font-weight: 900;
+}
+
+.master-shell.light .company-panel-head h3 small,
+.master-shell.light .subpage-note {
+  color: #53657a !important;
+}
+
+.company-admin-page,
+.company-admin-filter-row {
+  overflow: visible;
+}
+
+.company-filter-dropdown {
+  position: relative;
+  min-width: 0;
+  z-index: 20;
+}
+
+.company-filter-dropdown .filter-toggle {
+  width: 100%;
+  height: 38px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.company-filter-dropdown .filter-toggle.open::after {
+  transform: translateY(-35%) rotate(225deg);
+}
+
+.company-filter-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  z-index: 80;
+  display: grid;
+  gap: 4px;
+  max-height: 220px;
+  overflow-y: auto;
+  padding: 6px;
+  border: 1px solid rgba(42, 133, 227, 0.35);
+  border-radius: 7px;
+  background: #07172d;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.34);
+}
+
+.company-filter-menu button {
+  width: 100%;
+  height: 30px;
+  padding: 0 9px;
+  border: 0;
+  border-radius: 5px;
+  color: #dcecff;
+  background: transparent;
+  text-align: left;
+  box-shadow: none;
+}
+
+.company-filter-menu button:hover,
+.company-filter-menu button.selected {
+  color: #ffffff;
+  background: rgba(47, 140, 255, 0.24);
+}
+
+.master-shell.light .company-admin-pagination {
+  color: #334155 !important;
+  font-weight: 700;
+}
+
+.master-shell.light .company-admin-pagination > span {
+  color: #1f3349 !important;
+}
+
+.master-shell.light .company-admin-pagination > span,
+.master-shell.light .edge-pagination > span,
+.master-shell.light .audit-pagination > span,
+.master-shell.light .incident-pagination > span,
+.master-shell.light .backend-db-panel-footer > span {
+  color: #1f3349 !important;
+  font-weight: 800 !important;
+}
+
+.company-list-panel .company-admin-table {
+  flex: 0 0 auto !important;
+  table-layout: fixed;
+}
+
+.company-list-panel .company-admin-table thead,
+.company-list-panel .company-admin-table tbody,
+.company-list-panel .company-admin-table tr {
+  height: auto !important;
+}
+
+.company-list-panel .company-admin-table th,
+.company-list-panel .company-admin-table td {
+  height: 44px !important;
+  max-height: 44px;
+  vertical-align: middle;
+}
+
+.company-list-panel .company-admin-table th:nth-child(1) {
+  width: 15%;
+}
+
+.company-list-panel .company-admin-table th:nth-child(2) {
+  width: 7%;
+}
+
+.company-list-panel .company-admin-table th:nth-child(3) {
+  width: 13%;
+}
+
+.company-list-panel .company-admin-table th:nth-child(4) {
+  width: 18%;
+}
+
+.company-list-panel .company-admin-table th:nth-child(5) {
+  width: 6%;
+}
+
+.company-list-panel .company-admin-table th:nth-child(6) {
+  width: 9%;
+}
+
+.company-list-panel .company-admin-table th:nth-child(7) {
+  width: 16%;
+}
+
+.company-list-panel .company-admin-table th:nth-child(8) {
+  width: 16%;
+}
+
+.company-list-panel .company-admin-table td:last-child {
+  display: table-cell !important;
+}
+
+.company-row-actions {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+}
+
+.master-shell.light .company-admin-filter-row button,
+.master-shell.light .company-admin-filter-row label,
+.master-shell.light .search-box {
+  background: #ffffff !important;
+  border: 1px solid #b9cbe0 !important;
+  color: #244461 !important;
+  box-shadow: 0 2px 8px rgba(31, 73, 125, 0.06) !important;
+}
+
+.master-shell.light .company-admin-filter-row input,
+.master-shell.light .search-box input,
+.master-shell.light .member-table select {
+  color: #142235 !important;
+  background: transparent !important;
+}
+
+.master-shell.light .company-admin-filter-row input::placeholder,
+.master-shell.light .search-box input::placeholder {
+  color: #7a8ca3 !important;
+}
+
+.master-shell.light .company-admin-filter-row .primary,
+.master-shell.light .company-panel-head button,
+.master-shell.light .company-detail-actions button,
+.master-shell.light .company-admin-table button,
+.master-shell.light .company-admin-pagination button,
+.master-shell.light .small-btn {
+  border-color: #97b7d9 !important;
+  color: #174f7a !important;
+  background: #e8f2fc !important;
+  box-shadow: 0 3px 9px rgba(31, 73, 125, 0.09) !important;
+}
+
+.master-shell.light .company-admin-filter-row .primary {
+  border-color: #79a7d6 !important;
+  color: #0f4f87 !important;
+  background: #dceeff !important;
+  box-shadow: 0 4px 12px rgba(31, 115, 190, 0.14) !important;
+  font-weight: 800;
+}
+
+.master-shell.light .company-admin-filter-row .filter-toggle.active {
+  border-color: #7fa8d2 !important;
+  color: #0f4f87 !important;
+  background: #edf6ff !important;
+  box-shadow:
+    inset 0 0 0 1px rgba(31, 115, 190, 0.12),
+    0 3px 10px rgba(31, 73, 125, 0.08) !important;
+  font-weight: 800;
+}
+
+.master-shell.light .company-admin-filter-row .filter-toggle.active::after {
+  color: #0f4f87 !important;
+  opacity: 1;
+}
+
+.master-shell.light .company-filter-menu {
+  border-color: #b9cbe0 !important;
+  background: #ffffff !important;
+  box-shadow: 0 12px 26px rgba(31, 73, 125, 0.16) !important;
+}
+
+.master-shell.light .company-filter-menu button {
+  border: 0 !important;
+  color: #244461 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.master-shell.light .company-filter-menu button:hover,
+.master-shell.light .company-filter-menu button.selected {
+  color: #0f4f87 !important;
+  background: #edf6ff !important;
+}
+
+.master-shell.light .company-admin-filter-row > .company-filter-dropdown > .filter-toggle,
+.master-shell.light .company-panel-head button,
+.master-shell.light .company-admin-pagination button {
+  border-color: #91b2d5 !important;
+  color: #174f7a !important;
+  background: #eaf3fc !important;
+}
+
+.master-shell.light .company-panel-head button:hover,
+.master-shell.light .company-detail-actions button:hover,
+.master-shell.light .company-admin-table button:hover,
+.master-shell.light .company-admin-pagination button:hover,
+.master-shell.light .small-btn:hover,
+.master-shell.light .company-admin-filter-row .primary:hover {
+  border-color: #7fa8d2 !important;
+  color: #0f4f87 !important;
+  background: #edf6ff !important;
+}
+
+.master-shell.light .company-admin-table,
+.master-shell.light .member-table {
+  overflow: hidden;
+  border: 1px solid #9fb7d2 !important;
+  border-radius: 8px;
+  background: #ffffff !important;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.master-shell.light .company-admin-table th,
+.master-shell.light .member-table th {
+  color: #53657a !important;
+  background: #edf4fc !important;
+  border-bottom: 1px solid #b9cbe0 !important;
+  border-right: 1px solid #d7e3f0 !important;
+  font-weight: 800;
+}
+
+.master-shell.light .company-admin-table th:last-child,
+.master-shell.light .member-table th:last-child {
+  border-right: 0 !important;
+}
+
+.master-shell.light .company-admin-table td,
+.master-shell.light .company-admin-table tbody tr:nth-child(even) td,
+.master-shell.light .member-table td,
+.master-shell.light .member-table tbody tr:nth-child(even) td {
+  color: #142235 !important;
+  background: #ffffff !important;
+  border-bottom: 1px solid #dce6f1 !important;
+  border-right: 1px solid #e2eaf3 !important;
+  font-weight: 600;
+}
+
+.master-shell.light .company-admin-table td:last-child,
+.master-shell.light .member-table td:last-child {
+  border-right: 0 !important;
+}
+
+.master-shell.light .company-admin-table tbody tr:hover td,
+.master-shell.light .member-table tbody tr:hover td {
+  background: #f1f6fb !important;
+}
+
+.master-shell.light .company-admin-table tr.selected td,
+.master-shell.light .member-table tr.selected td {
+  background: #eaf3ff !important;
+  box-shadow: inset 0 0 0 1px rgba(31, 115, 190, 0.22);
+}
+
+/* Light mode: apply the member company table system across admin pages. */
+.master-shell.light .company-admin-table,
+.master-shell.light .member-table,
+.master-shell.light .control-table,
+.master-shell.light .audit-log-table,
+.master-shell.light .backend-db-table,
+.master-shell.light .edge-table,
+.master-shell.light .incident-table,
+.master-shell.light .incident-history-table,
+.master-shell.light .ingress-table,
+.master-shell.light .system-alert-table table,
+.master-shell.light .branch-table,
+.master-shell.light .settings-table {
+  overflow: hidden;
+  border: 1px solid #9fb7d2 !important;
+  border-radius: 8px;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #ffffff !important;
+}
+
+.master-shell.light .company-admin-table th,
+.master-shell.light .member-table th,
+.master-shell.light .control-table th,
+.master-shell.light .audit-log-table th,
+.master-shell.light .backend-db-table th,
+.master-shell.light .edge-table th,
+.master-shell.light .incident-table th,
+.master-shell.light .incident-history-table th,
+.master-shell.light .ingress-table th,
+.master-shell.light .system-alert-table table th,
+.master-shell.light .branch-table th,
+.master-shell.light .settings-table th {
+  height: 38px;
+  color: #42546a !important;
+  background: #edf4fc !important;
+  border-bottom: 1px solid #b9cbe0 !important;
+  border-right: 1px solid #d7e3f0 !important;
+  font-weight: 800 !important;
+}
+
+.master-shell.light .company-admin-table td,
+.master-shell.light .company-admin-table tbody tr:nth-child(even) td,
+.master-shell.light .member-table td,
+.master-shell.light .member-table tbody tr:nth-child(even) td,
+.master-shell.light .control-table td,
+.master-shell.light .control-table tbody tr:nth-child(even) td,
+.master-shell.light .audit-log-table td,
+.master-shell.light .audit-log-table tbody tr:nth-child(even) td,
+.master-shell.light .backend-db-table td,
+.master-shell.light .backend-db-table tbody tr:nth-child(even) td,
+.master-shell.light .edge-table td,
+.master-shell.light .edge-table tbody tr:nth-child(even) td,
+.master-shell.light .incident-table td,
+.master-shell.light .incident-table tbody tr:nth-child(even) td,
+.master-shell.light .incident-history-table td,
+.master-shell.light .incident-history-table tbody tr:nth-child(even) td,
+.master-shell.light .ingress-table td,
+.master-shell.light .ingress-table tbody tr:nth-child(even) td,
+.master-shell.light .system-alert-table table td,
+.master-shell.light .system-alert-table table tbody tr:nth-child(even) td,
+.master-shell.light .branch-table td,
+.master-shell.light .branch-table tbody tr:nth-child(even) td,
+.master-shell.light .settings-table td,
+.master-shell.light .settings-table tbody tr:nth-child(even) td {
+  color: #142235 !important;
+  background: #ffffff !important;
+  border-bottom: 1px solid #dce6f1 !important;
+  border-right: 1px solid #e2eaf3 !important;
+  font-weight: 600;
+}
+
+.master-shell.light .company-admin-table th:last-child,
+.master-shell.light .company-admin-table td:last-child,
+.master-shell.light .member-table th:last-child,
+.master-shell.light .member-table td:last-child,
+.master-shell.light .control-table th:last-child,
+.master-shell.light .control-table td:last-child,
+.master-shell.light .audit-log-table th:last-child,
+.master-shell.light .audit-log-table td:last-child,
+.master-shell.light .backend-db-table th:last-child,
+.master-shell.light .backend-db-table td:last-child,
+.master-shell.light .edge-table th:last-child,
+.master-shell.light .edge-table td:last-child,
+.master-shell.light .incident-table th:last-child,
+.master-shell.light .incident-table td:last-child,
+.master-shell.light .incident-history-table th:last-child,
+.master-shell.light .incident-history-table td:last-child,
+.master-shell.light .ingress-table th:last-child,
+.master-shell.light .ingress-table td:last-child,
+.master-shell.light .system-alert-table table th:last-child,
+.master-shell.light .system-alert-table table td:last-child,
+.master-shell.light .branch-table th:last-child,
+.master-shell.light .branch-table td:last-child,
+.master-shell.light .settings-table th:last-child,
+.master-shell.light .settings-table td:last-child {
+  border-right: 0 !important;
+}
+
+.master-shell.light .company-admin-table tbody tr:hover td,
+.master-shell.light .member-table tbody tr:hover td,
+.master-shell.light .control-table tbody tr:hover td,
+.master-shell.light .audit-log-table tbody tr:hover td,
+.master-shell.light .backend-db-table tbody tr:hover td,
+.master-shell.light .edge-table tbody tr:hover td,
+.master-shell.light .incident-table tbody tr:hover td,
+.master-shell.light .incident-history-table tbody tr:hover td,
+.master-shell.light .ingress-table tbody tr:hover td,
+.master-shell.light .system-alert-table table tbody tr:hover td,
+.master-shell.light .branch-table tbody tr:hover td,
+.master-shell.light .settings-table tbody tr:hover td {
+  background: #f1f6fb !important;
+}
+
+.master-shell.light .company-admin-table tr.selected td,
+.master-shell.light .member-table tr.selected td,
+.master-shell.light .control-table tr.selected td,
+.master-shell.light .audit-log-table tr.selected td,
+.master-shell.light .edge-table tr.selected td,
+.master-shell.light .incident-table tr.selected td {
+  background: #eaf3ff !important;
+  box-shadow: inset 0 0 0 1px rgba(31, 115, 190, 0.22);
+}
+
+/* Light mode: unify action/filter/pagination buttons inside page content. */
+.master-shell.light main button,
+.master-shell.light main .filter-toggle,
+.master-shell.light main .small-btn {
+  border-color: #91b2d5 !important;
+  color: #174f7a !important;
+  background: #eaf3fc !important;
+  box-shadow: 0 3px 9px rgba(31, 73, 125, 0.09) !important;
+  font-weight: 700;
+}
+
+.master-shell.light main button:hover,
+.master-shell.light main .filter-toggle:hover,
+.master-shell.light main .small-btn:hover {
+  border-color: #7fa8d2 !important;
+  color: #0f4f87 !important;
+  background: #edf6ff !important;
+}
+
+.master-shell.light main button.active,
+.master-shell.light main .active > button,
+.master-shell.light main .filter-toggle.active {
+  border-color: #79a7d6 !important;
+  color: #0f4f87 !important;
+  background: #dceeff !important;
+  box-shadow:
+    inset 0 0 0 1px rgba(31, 115, 190, 0.12),
+    0 4px 12px rgba(31, 115, 190, 0.14) !important;
+}
+
+.master-shell.light main button.primary,
+.master-shell.light main .primary {
+  border-color: #6fa2d5 !important;
+  color: #0d4c80 !important;
+  background: #d8ebff !important;
+}
+
+.master-shell.light main button.success,
+.master-shell.light main .success {
+  border-color: #77c7a0 !important;
+  color: #047857 !important;
+  background: #def7e9 !important;
+}
+
+.master-shell.light main .company-filter-menu button {
+  height: 30px;
+  border: 0 !important;
+  color: #244461 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  font-weight: 700;
+}
+
+.master-shell.light main .company-filter-menu button:hover,
+.master-shell.light main .company-filter-menu button.selected {
+  color: #0f4f87 !important;
+  background: #edf6ff !important;
+}
+
+.master-shell.light .company-admin-table td:first-child b,
+.master-shell.light .company-detail-card dd,
+.master-shell.light .company-permission-summary strong {
+  color: #142235 !important;
+}
+
+.master-shell.light .company-admin-table td:first-child small,
+.master-shell.light .company-detail-card dt,
+.master-shell.light .company-detail-card small,
+.master-shell.light .company-permission-summary b {
+  color: #53657a !important;
+}
+
+.master-shell.light .company-detail-card dl,
+.master-shell.light .company-link-card li,
+.master-shell.light .company-permission-summary span {
+  background: #ffffff !important;
+  border-color: #c7d4e3 !important;
+}
+
+.master-shell.light .company-detail-card dt,
+.master-shell.light .company-detail-card dd {
+  border-bottom-color: #dce6f1 !important;
+}
+
+.master-shell.light .company-link-card span {
+  color: #142235 !important;
+}
+
+.master-shell.light .company-link-card b {
+  color: #155a99 !important;
+}
+
+.master-shell.light .company-link-card em {
+  color: #047857 !important;
+  font-weight: 800;
+}
+
+.master-shell.light .company-link-card em.warn {
+  color: #b45309 !important;
+}
+
+.master-shell.light .company-state,
+.master-shell.light .member-table .status {
+  border: 1px solid #9bb8d8;
+  color: #0f4f87 !important;
+  background: #dcecff !important;
+  font-weight: 800;
+}
+
+.master-shell.light .company-state.ok,
+.master-shell.light .member-table .status.ok {
+  border-color: #74c69a;
+  color: #047857 !important;
+  background: #dff7e9 !important;
+}
+
+.master-shell.light .company-state.warn,
+.master-shell.light .company-state.caution,
+.master-shell.light .member-table .status.caution {
+  border-color: #d59d2b;
+  color: #92400e !important;
+  background: #fff0c7 !important;
+}
+
+.master-shell.light .company-state.danger,
+.master-shell.light .member-table .status.danger {
+  border-color: #df8b8b;
+  color: #991b1b !important;
+  background: #ffe4e4 !important;
+}
+
+.master-shell.light .edge-badge,
+.master-shell.light .company-state,
+.master-shell.light .sys-badge,
+.master-shell.light .ingress-badge,
+.master-shell.light .audit-badge,
+.master-shell.light .branch-badge,
+.master-shell.light .incident-badge,
+.master-shell.light .settings-badge,
+.master-shell.light .db-badge,
+.master-shell.light .status,
+.master-shell.light .center-modal-status {
+  border-width: 1px !important;
+  font-weight: 800 !important;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.45) !important;
+}
+
+.master-shell.light .edge-badge.ok,
+.master-shell.light .company-state.ok,
+.master-shell.light .sys-badge.ok,
+.master-shell.light .ingress-badge.ok,
+.master-shell.light .audit-badge.ok,
+.master-shell.light .branch-badge.ok,
+.master-shell.light .incident-badge.done,
+.master-shell.light .settings-badge.ok,
+.master-shell.light .db-badge.ok,
+.master-shell.light .status.ok,
+.master-shell.light .center-modal-status.ok {
+  border-color: #74c69a !important;
+  color: #047857 !important;
+  background: #dff7e9 !important;
+}
+
+.master-shell.light .edge-badge.warn,
+.master-shell.light .edge-badge.hold,
+.master-shell.light .company-state.warn,
+.master-shell.light .company-state.caution,
+.master-shell.light .sys-badge.warn,
+.master-shell.light .sys-badge.hold,
+.master-shell.light .ingress-badge.retry,
+.master-shell.light .ingress-badge.hold,
+.master-shell.light .audit-badge.warn,
+.master-shell.light .branch-badge.warn,
+.master-shell.light .incident-badge.warn,
+.master-shell.light .incident-badge.wait,
+.master-shell.light .settings-badge.warn,
+.master-shell.light .db-badge.duplicate,
+.master-shell.light .db-badge.timeout,
+.master-shell.light .status.caution,
+.master-shell.light .center-modal-status.caution {
+  border-color: #d59d2b !important;
+  color: #92400e !important;
+  background: #fff0c7 !important;
+}
+
+.master-shell.light .edge-badge.danger,
+.master-shell.light .company-state.danger,
+.master-shell.light .sys-badge.danger,
+.master-shell.light .ingress-badge.reject,
+.master-shell.light .audit-badge.danger,
+.master-shell.light .incident-badge.critical,
+.master-shell.light .db-badge.reject,
+.master-shell.light .status.danger,
+.master-shell.light .center-modal-status.danger {
+  border-color: #df8b8b !important;
+  color: #991b1b !important;
+  background: #ffe4e4 !important;
+}
+
+.master-shell.light .edge-badge.info,
+.master-shell.light .edge-badge.idle,
+.master-shell.light .edge-badge.path,
+.master-shell.light .sys-badge.info,
+.master-shell.light .ingress-badge.info,
+.master-shell.light .audit-badge.info,
+.master-shell.light .incident-badge.info,
+.master-shell.light .incident-badge.action {
+  border-color: #8fb5dc !important;
+  color: #155a99 !important;
+  background: #e3f0ff !important;
+}
+
+.master-shell.light .company-state.muted,
+.master-shell.light .status.muted,
+.master-shell.light .center-modal-status.muted {
+  border-color: #aab7c6 !important;
+  color: #475569 !important;
+  background: #e9eef5 !important;
+}
+
+.master-shell.light .member-table select {
+  height: 30px;
+  border: 1px solid #b9cbe0;
+  border-radius: 5px;
+  padding: 0 8px;
+  background: #ffffff !important;
+}
+
+/* Light mode: branch, audit log, and settings page readability. */
+.master-shell.light .branch-page .branch-panel h3,
+.master-shell.light .branch-page .branch-panel-head h3,
+.master-shell.light .branch-page .branch-devices > h3,
+.master-shell.light .branch-page .branch-history > h3,
+.master-shell.light .audit-log-page .audit-panel h3,
+.master-shell.light .audit-log-page .audit-panel-head h3,
+.master-shell.light .audit-log-page .audit-type-card > h3,
+.master-shell.light .audit-log-page .audit-risk-card > h3,
+.master-shell.light .settings-page .settings-panel h3,
+.master-shell.light .settings-page .settings-panel-head h3,
+.master-shell.light .settings-page .settings-security > h3,
+.master-shell.light .settings-page .settings-backup > h3,
+.master-shell.light .settings-page .settings-notification > h3 {
+  color: #142235 !important;
+  font-weight: 900;
+}
+
+.master-shell.light .branch-page .branch-panel h3 small,
+.master-shell.light .audit-log-page .audit-panel-head h3 small,
+.master-shell.light .settings-page .settings-panel-head h3 small {
+  color: #475569 !important;
+  font-weight: 800;
+}
+
+.master-shell.light .branch-page .branch-filter-row label,
+.master-shell.light .branch-page .branch-filter-row button,
+.master-shell.light .branch-page .branch-search,
+.master-shell.light .audit-log-page .audit-filter-row button,
+.master-shell.light .audit-log-page .audit-filter-row label {
+  color: #334155 !important;
+  background: #ffffff !important;
+  border-color: #b8cbe0 !important;
+}
+
+.master-shell.light .branch-page .branch-filter-row label span {
+  color: #475569 !important;
+  font-weight: 800;
+}
+
+.master-shell.light .branch-page .branch-search input,
+.master-shell.light .audit-log-page .audit-filter-row input {
+  color: #142235 !important;
+  font-weight: 800;
+}
+
+.master-shell.light .branch-page .branch-search input::placeholder,
+.master-shell.light .audit-log-page .audit-filter-row input::placeholder {
+  color: #64748b !important;
+  opacity: 1;
+}
+
+.master-shell.light .branch-page .branch-map-legend {
+  color: #334155 !important;
+  background: rgba(255, 255, 255, 0.92) !important;
+  border-color: #b8cbe0 !important;
+  font-weight: 800;
+}
+
+.master-shell.light .branch-page .branch-map-legend .ok {
+  color: #2f7d55 !important;
+}
+
+.master-shell.light .branch-page .branch-map-legend .warn,
+.master-shell.light .branch-page .branch-map-legend .caution {
+  color: #92400e !important;
+}
+
+.master-shell.light .branch-page .branch-map-legend .info {
+  color: #155a99 !important;
+}
+
+.master-shell.light .branch-page .branch-map-legend .danger {
+  color: #991b1b !important;
+}
+
+.master-shell.light .branch-page .branch-map-marker b {
+  color: #142235 !important;
+  font-weight: 900;
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.95),
+    0 2px 6px rgba(255, 255, 255, 0.9) !important;
+}
+
+.master-shell.light .branch-page .branch-detail dt,
+.master-shell.light .branch-page .gps-zone-card dt,
+.master-shell.light .settings-page .settings-backup dt,
+.master-shell.light .audit-log-page .audit-detail-card dt {
+  color: #334155 !important;
+  font-weight: 900;
+}
+
+.master-shell.light .branch-page .branch-detail dd,
+.master-shell.light .branch-page .gps-zone-card dd,
+.master-shell.light .settings-page .settings-backup dd,
+.master-shell.light .audit-log-page .audit-detail-card dd {
+  color: #142235 !important;
+  font-weight: 800;
+}
+
+.master-shell.light .branch-page .branch-detail dt,
+.master-shell.light .branch-page .branch-detail dd,
+.master-shell.light .branch-page .gps-zone-card dt,
+.master-shell.light .branch-page .gps-zone-card dd,
+.master-shell.light .settings-page .settings-backup dt,
+.master-shell.light .settings-page .settings-backup dd,
+.master-shell.light .audit-log-page .audit-detail-card dt,
+.master-shell.light .audit-log-page .audit-detail-card dd {
+  border-bottom-color: #d7e3f0 !important;
+}
+
+.master-shell.light .branch-page .branch-detail small,
+.master-shell.light .audit-log-page .audit-detail-card small {
+  color: #475569 !important;
+  font-weight: 800;
+}
+
+.master-shell.light .branch-page .branch-detail code {
+  color: #155a99 !important;
+  background: #e3f0ff !important;
+  border: 1px solid #b8cbe0;
+  font-weight: 800;
+}
+
+.master-shell.light .branch-page .gps-zone-map {
+  border-color: #b8cbe0 !important;
+  background:
+    linear-gradient(rgba(150, 172, 198, 0.28) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(150, 172, 198, 0.28) 1px, transparent 1px) !important;
+  background-size: 24px 24px !important;
+}
+
+.master-shell.light .branch-page .gps-zone-map span {
+  color: #334155 !important;
+  font-weight: 900;
+}
+
+.master-shell.light .branch-page .branch-table th,
+.master-shell.light .audit-log-page .audit-log-table th,
+.master-shell.light .settings-page .settings-table th {
+  color: #334155 !important;
+  font-weight: 900 !important;
+}
+
+.master-shell.light .branch-page .branch-table td,
+.master-shell.light .audit-log-page .audit-log-table td,
+.master-shell.light .settings-page .settings-table td {
+  color: #142235 !important;
+  font-weight: 700;
+}
+
+.master-shell.light .audit-log-page .audit-risk-score {
+  background: #e5f4ec !important;
+  border-color: #8fc3a6 !important;
+}
+
+.master-shell.light .audit-log-page .audit-risk-score strong {
+  color: #2f7d55 !important;
+  font-weight: 900;
+}
+
+.master-shell.light .audit-log-page .audit-risk-score span {
+  color: #334155 !important;
+  font-weight: 800;
+}
+
+.master-shell.light .audit-log-page .audit-risk-card li,
+.master-shell.light .audit-log-page .audit-bars span,
+.master-shell.light .settings-page .settings-form-grid label,
+.master-shell.light .settings-page .settings-security li,
+.master-shell.light .settings-page .settings-notification span {
+  color: #142235 !important;
+  background: #ffffff !important;
+  border-color: #c7d4e3 !important;
+}
+
+.master-shell.light .audit-log-page .audit-risk-card li span,
+.master-shell.light .settings-page .settings-security li span {
+  color: #334155 !important;
+  font-weight: 800;
+}
+
+.master-shell.light .audit-log-page .audit-risk-card b,
+.master-shell.light .settings-page .settings-security b {
+  color: #142235 !important;
+  font-weight: 900;
+}
+
+.master-shell.light .audit-log-page .audit-risk-card b.warn {
+  color: #92400e !important;
+}
+
+.master-shell.light .audit-log-page .audit-bars b {
+  background: linear-gradient(90deg, rgba(47, 115, 190, 0.42), rgba(47, 115, 190, 0.1)) !important;
+}
+
+.master-shell.light .audit-log-page .audit-bars em {
+  color: #142235 !important;
+  font-weight: 800;
+}
+
+.master-shell.light .audit-log-page .audit-pagination,
+.master-shell.light .audit-log-page .audit-pagination > span {
+  color: #1f3349 !important;
+  font-weight: 800 !important;
+}
+
+.master-shell.light .settings-page .settings-form-grid span,
+.master-shell.light .settings-page .settings-notification b {
+  color: #142235 !important;
+  font-weight: 900;
+}
+
+.master-shell.light .settings-page .settings-form-grid small,
+.master-shell.light .settings-page .settings-notification em {
+  color: #475569 !important;
+  font-weight: 800;
+}
+
+.master-shell.light .settings-page .settings-form-grid select {
+  color: #142235 !important;
+  background: #f8fbff !important;
+  border-color: #b8cbe0 !important;
+  font-weight: 800;
+}
+
+.master-shell.light .settings-page .settings-security em,
+.master-shell.light .settings-page .settings-notification strong {
+  color: #2f7d55 !important;
+  background: #e5f4ec !important;
+  border: 1px solid #8fc3a6 !important;
+  font-weight: 900;
+}
+
+.master-shell.light .settings-page .settings-security em.warn {
+  color: #92400e !important;
+  background: #fff0c7 !important;
+  border-color: #d59d2b !important;
+}
+
+.company-list-panel .company-admin-table tbody tr {
+  cursor: pointer;
+}
+
+.master-shell.light .dashboard-pipeline-table .pipeline-table-state b {
+  border-color: #a7e7c0;
+  color: #047857;
+  background: #ecfdf5;
+}
+
+.master-shell.light .dashboard-pipeline-table .pipeline-table-state b::before {
+  box-shadow: 0 0 0 3px rgba(4, 120, 87, 0.12);
+}
+
+.master-shell.light .dashboard-pipeline-table .pipeline-table-state span {
+  color: #64748b;
+}
+
+/* Light mode: make the system pipeline table read clearly without heavy fills. */
+.master-shell.light .dashboard-pipeline-table {
+  overflow: hidden;
+  border: 1px solid #c7d4e3 !important;
+  border-radius: 8px;
+  background: #ffffff !important;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.85), 0 6px 16px rgba(36, 60, 86, 0.08);
+}
+
+.master-shell.light .dashboard-pipeline-table tr {
+  border-bottom: 1px solid #dce6f1 !important;
+}
+
+.master-shell.light .dashboard-pipeline-table tr:nth-child(3n) {
+  border-bottom-color: #b8cbe0 !important;
+}
+
+.master-shell.light .dashboard-pipeline-table tr:last-child {
+  border-bottom: 0 !important;
+}
+
+.master-shell.light .dashboard-pipeline-table td {
+  background: #ffffff !important;
+  border-right: 1px solid #e2eaf3 !important;
+  color: #172235 !important;
+}
+
+.master-shell.light .dashboard-pipeline-table td:last-child {
+  border-right: 0 !important;
+}
+
+.master-shell.light .dashboard-pipeline-table .pipeline-table-icon {
+  background: #f1f6fb !important;
+  border-right-color: #c7d8eb !important;
+}
+
+.master-shell.light .dashboard-pipeline-table .pipeline-table-name {
+  color: #172235 !important;
+  font-weight: 800;
+}
+
+.master-shell.light .dashboard-pipeline-table td:nth-child(3),
+.master-shell.light .dashboard-pipeline-table tr:not(:first-child) td:first-child:not(.pipeline-table-icon) {
+  color: #64748b !important;
+}
+
+.master-shell.light .dashboard-pipeline-table td:nth-child(4),
+.master-shell.light .dashboard-pipeline-table tr:not(:first-child) td:nth-child(2):not(.pipeline-table-name) {
+  color: #111827 !important;
+  font-weight: 800;
+}
+
+/* Stronger light-mode readability for the dashboard pipeline data table. */
+.master-shell.light .dashboard-pipeline-panel {
+  background: #f8fbff !important;
+  border-color: #9fb7d2 !important;
+  box-shadow: 0 10px 24px rgba(31, 73, 125, 0.14) !important;
+  backdrop-filter: none !important;
+}
+
+.master-shell.light .dashboard-pipeline-panel .panel-title {
+  padding-bottom: 10px;
+  border-bottom: 0;
+}
+
+.master-shell.light .dashboard-pipeline-table {
+  opacity: 1 !important;
+  filter: none !important;
+  border: 2px solid #8eabc9 !important;
+  background: #ffffff !important;
+  box-shadow: none !important;
+}
+
+.master-shell.light .dashboard-pipeline-table tr {
+  background: #ffffff !important;
+  border-bottom: 1px solid #b9cbe0 !important;
+}
+
+.master-shell.light .dashboard-pipeline-table tr:nth-child(6n + 4),
+.master-shell.light .dashboard-pipeline-table tr:nth-child(6n + 5),
+.master-shell.light .dashboard-pipeline-table tr:nth-child(6n + 6) {
+  background: #f6f9fd !important;
+}
+
+.master-shell.light .dashboard-pipeline-table tr:nth-child(3n) {
+  border-bottom: 2px solid #8eabc9 !important;
+}
+
+.master-shell.light .dashboard-pipeline-table td {
+  height: 40px;
+  background: transparent !important;
+  border-right: 1px solid #c3d2e4 !important;
+  color: #0f172a !important;
+  font-size: 13.5px;
+  font-weight: 600;
+}
+
+.master-shell.light .dashboard-pipeline-table .pipeline-table-icon {
+  background: #dbeafe !important;
+  border-right: 1px solid #9bb9da !important;
+}
+
+.master-shell.light .dashboard-pipeline-table .pipeline-table-name {
+  background: #edf4fc !important;
+  border-right: 1px solid #b1c7df !important;
+  color: #0f172a !important;
+  font-weight: 900;
+}
+
+.master-shell.light .dashboard-pipeline-table .pipeline-spark {
+  background: rgba(241, 246, 251, 0.72) !important;
+}
+
+.master-shell.light .dashboard-pipeline-table .pipeline-table-state {
+  background: transparent !important;
+}

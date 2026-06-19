@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+package hifive.ingress.v1;
+
+import "google/protobuf/timestamp.proto";
+
+message PassageEvent {
+  string event_id = 1;
+  string device_id = 2;
+  string camera_id = 3;
+  string camera_group_id = 4;
+  string camera_role = 5;
+  google.protobuf.Timestamp timestamp = 6;
+  string direction = 7;
+  uint32 lane_no = 8;
+  uint32 global_lane_no = 9;
+  uint64 local_track_id = 10;
+  string vehicle_pass_id = 11;
+  float vehicle_confidence = 12;
+  string plate_text = 13;
+  float plate_confidence = 14;
+  uint32 candidate_count = 15;
+  float agreement_ratio = 16;
+  BBox plate_bbox = 17;
+  bool needs_review = 18;
+  string review_reason = 19;
+  string schema_version = 20;
+}
+
+message BBox {
+  float x = 1;
+  float y = 2;
+  float w = 3;
+  float h = 4;
+  string coord = 5;
+}
+
+message GpsPoint {
+  double latitude = 1;
+  double longitude = 2;
+  double speed_kmh = 3;
+  double heading = 4;
+  google.protobuf.Timestamp captured_at = 5;
+}
+
+message PassageAck {
+  string event_id = 1;
+  string status = 2;
+  string message = 3;
+}

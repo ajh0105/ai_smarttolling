@@ -1,0 +1,120 @@
+/* Hi-Five 로고: 대시보드와 동일한 hifive_logo.png 를 site-shell 내 .brand-mark 자리에 적용 */
+.site-shell .brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px !important;
+  height: 56px !important;
+  background-image: url('/hifive_logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.site-shell .brand-mark > i {
+  display: none !important;
+}
+.site-shell .footer .brand.brand-white .brand-mark {
+  background-image: url('/hifive_logo.png');
+}
+
+/* ============================================================
+   dashboard CSS 충돌 보호
+   ------------------------------------------------------------
+   dashboards/control/styles/pages.css 등이 .brand, .brand-mark,
+   .brand span, <main> 같은 generic selector를 사용한다. Vue 라우터로
+   dashboard 페이지를 한 번이라도 진입하면 그 CSS chunk가 head에
+   영구 잔존하여 index 페이지 헤더/메인이 변형된다.
+   site-shell 안의 헤더/메인을 더 specific 셀렉터로 명시하여 보호한다.
+   ============================================================ */
+
+/* main 태그의 사이드 padding 무력화 */
+.site-shell > main,
+.site-shell main {
+  padding: 0 !important;
+}
+
+/* site-header 사이즈를 명시적으로 강제 — dashboard CSS의 어떤 룰도 무력화 */
+.site-shell .site-header {
+  height: 76px !important;
+  min-height: 76px !important;
+  max-height: 76px !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+.site-shell .site-header .header-inner {
+  height: 76px !important;
+  min-height: 76px !important;
+  max-height: 76px !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* 헤더·푸터의 brand 영역: height·display 복원 */
+.site-shell .site-header .brand,
+.site-shell .footer .brand {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 9px !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* brand-mark: dashboard CSS의 transform/border/::after 모두 무력화
+   (width·height·background는 위에서 정의한 45×45 로고 유지) */
+.site-shell .brand-mark {
+  border: none !important;
+  transform: none !important;
+  position: static;
+}
+.site-shell .brand-mark::after {
+  content: none !important;
+  background: none !important;
+  position: static !important;
+}
+
+/* brand 안의 텍스트 span: dashboard CSS의 색/display/margin 무력화 + 원본(27px) 크기 유지 */
+.site-shell .site-header .brand > span:not(.brand-mark),
+.site-shell .footer .brand > span:not(.brand-mark) {
+  display: inline !important;
+  color: inherit !important;
+  font-size: 27px !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.055em !important;
+  line-height: 1 !important;
+  margin-top: 0 !important;
+}
+
+/* tech-card USED 배지 (실제 사용 중인 기술임을 시각적으로 강조) */
+.site-shell .tech-card {
+  position: relative;
+}
+.site-shell .tech-card .tech-used {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  padding: 3px 8px 3px 7px;
+  border-radius: 999px;
+  background: #d1fae5;
+  color: #047857;
+  line-height: 1;
+}
+.site-shell .tech-card .tech-used::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.18);
+}
+/* 다크 섹션에서는 톤 변경 */
+.site-shell .page-section.dark .tech-card .tech-used {
+  background: rgba(16, 185, 129, 0.18);
+  color: #6ee7b7;
+}

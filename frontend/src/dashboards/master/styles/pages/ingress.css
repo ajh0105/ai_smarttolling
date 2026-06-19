@@ -1,0 +1,362 @@
+.ingress-page {
+  display: grid;
+  gap: 14px;
+}
+
+.ingress-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.ingress-kpi,
+.ingress-panel {
+  border: 1px solid rgba(42, 133, 227, 0.28);
+  border-radius: 6px;
+  background: rgba(5, 16, 33, 0.72);
+  box-shadow: 0 0 0 1px rgba(14, 111, 219, 0.08), 0 18px 42px rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(16px);
+}
+
+.ingress-kpi {
+  min-height: 96px;
+  display: grid;
+  grid-template-columns: 62px 1fr;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+}
+
+.ingress-kpi i {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #06101f;
+  font-style: normal;
+  font-weight: 900;
+  background: linear-gradient(135deg, #35b7ff, #1378ef);
+  box-shadow: 0 0 12px rgba(19, 120, 239, 0.24);
+}
+
+.ingress-kpi i img {
+  display: block;
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.master-shell.light .ingress-kpi i img {
+  filter: brightness(0) invert(1);
+}
+
+.ingress-kpi span {
+  display: block;
+  color: #e6f1ff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.ingress-kpi strong {
+  display: block;
+  margin-top: 4px;
+  color: #fff;
+  font-size: 25px;
+  line-height: 1.1;
+}
+
+.ingress-kpi strong em {
+  color: #dce9f8;
+  font-size: 14px;
+  font-style: normal;
+}
+
+.ingress-kpi small {
+  display: block;
+  margin-top: 5px;
+  color: #8ff7a5;
+  font-size: 12px;
+}
+
+.ingress-kpi.danger small { color: #ff806e; }
+.ingress-kpi.caution small { color: #7ee6a0; }
+
+.ingress-main-grid {
+  display: grid;
+  grid-template-columns: minmax(290px, 0.72fr) minmax(420px, 0.92fr) minmax(510px, 1.18fr);
+  gap: 12px;
+}
+
+.ingress-panel {
+  min-width: 0;
+  padding: 13px;
+}
+
+.ingress-panel h3,
+.ingress-panel-title h3 {
+  margin: 0;
+  color: #f1f7ff;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.ingress-panel-title {
+  min-height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 11px;
+  padding-left: 10px;
+  border-left: 2px solid #1683ff;
+}
+
+.ingress-panel-title small {
+  color: #9fb2cb;
+  font-weight: 500;
+}
+
+.ingress-panel-title button {
+  height: 28px;
+  padding: 0 12px;
+  border: 1px solid rgba(42, 133, 227, 0.46);
+  border-radius: 5px;
+  color: #d9eaff;
+  background: rgba(5, 18, 37, 0.72);
+}
+
+.ingress-info-list {
+  display: grid;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+  border: 1px solid rgba(117, 151, 194, 0.15);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.ingress-info-list li {
+  min-height: 46px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 0 12px;
+  border-bottom: 1px solid rgba(117, 151, 194, 0.12);
+}
+
+.ingress-info-list li:last-child { border-bottom: 0; }
+.ingress-info-list span { color: #c9d7eb; font-size: 13px; }
+.ingress-info-list strong { color: #f5fbff; font-size: 16px; }
+.ingress-info-list b { color: #cfe0f4; font-size: 11px; font-weight: 500; }
+.ingress-info-list em { min-width: 72px; height: 28px; display: grid; place-items: center; border: 1px solid rgba(76, 223, 102, 0.35); border-radius: 6px; color: #67e887; background: rgba(35, 136, 68, 0.16); font-style: normal; font-weight: 800; }
+
+.ingress-info-panel footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 12px;
+  border-top: 1px solid rgba(117, 151, 194, 0.16);
+}
+
+.ingress-info-panel footer p {
+  margin: 0;
+  padding: 12px 8px 0;
+  border-right: 1px solid rgba(117, 151, 194, 0.16);
+}
+
+.ingress-info-panel footer p:last-child { border-right: 0; }
+.ingress-info-panel footer span { display: block; color: #9fb2cb; font-size: 11px; }
+.ingress-info-panel footer b { display: block; margin-top: 5px; color: #f4f8ff; font-size: 11px; }
+
+.ingress-chart-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px 18px;
+}
+
+.ingress-chart-grid section {
+  min-height: 174px;
+}
+
+.ingress-chart-grid h4 {
+  margin: 0 0 8px;
+  color: #e6f1ff;
+  font-size: 13px;
+}
+
+.line-chart {
+  height: 142px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  background:
+    linear-gradient(rgba(117, 151, 194, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(117, 151, 194, 0.1) 1px, transparent 1px);
+  background-size: 100% 35px, 48px 100%;
+}
+
+.line-chart::before {
+  content: '16:35   16:50   17:05   17:20   17:35';
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  bottom: 4px;
+  color: #90a5c0;
+  font-size: 11px;
+  word-spacing: 14px;
+}
+
+.line-chart svg {
+  position: absolute;
+  inset: 8px 8px 18px;
+  width: calc(100% - 16px);
+  height: calc(100% - 26px);
+  overflow: visible;
+}
+
+.line-chart polyline {
+  fill: none;
+  stroke: #2f8cff;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 0 5px rgba(47, 140, 255, 0.42));
+}
+
+.line-chart circle {
+  r: 3.5;
+  fill: #2f8cff;
+  stroke: #06101f;
+  stroke-width: 1.5;
+}
+
+.line-chart.dual .ack { stroke: #42d779; filter: drop-shadow(0 0 5px rgba(66, 215, 121, 0.34)); }
+.line-chart.dual .retry { stroke: #ffb928; filter: drop-shadow(0 0 5px rgba(255, 185, 40, 0.28)); }
+.line-chart.dual .ack-points circle { fill: #42d779; }
+.line-chart.dual .retry-points circle { fill: #ffb928; }
+.line-chart.reject .reject-line { stroke: #ff665f; filter: drop-shadow(0 0 5px rgba(255, 102, 95, 0.3)); }
+.line-chart.reject .malformed-line { stroke: #b28cff; filter: drop-shadow(0 0 5px rgba(178, 140, 255, 0.24)); }
+.line-chart.reject .reject-points circle { fill: #ff665f; }
+.line-chart.reject .malformed-points circle { fill: #b28cff; }
+.line-chart.cyan polyline { stroke: #26c8e8; filter: drop-shadow(0 0 5px rgba(38, 200, 232, 0.32)); }
+.line-chart.cyan circle { fill: #26c8e8; }
+
+.ingress-side-stack {
+  display: grid;
+  gap: 12px;
+}
+
+.ingress-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ingress-table th,
+.ingress-table td {
+  height: 30px;
+  padding: 0 10px;
+  border-bottom: 1px solid rgba(117, 151, 194, 0.12);
+  color: #d7e6ff;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.ingress-table td {
+  font-weight: 400;
+}
+
+.ingress-table th {
+  color: #9fb2cb;
+  background: rgba(26, 46, 73, 0.54);
+  font-weight: 600;
+}
+
+.route-lan { color: #57e77e !important; font-weight: 400; }
+.route-lte { color: #ffb928 !important; font-weight: 400; }
+
+.ingress-side-stack .ingress-table {
+  table-layout: fixed;
+  font-size: 11px;
+}
+
+.ingress-side-stack .ingress-table td,
+.ingress-side-stack .ingress-table th {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ingress-error-panel {
+  padding-bottom: 8px;
+}
+
+.ingress-error-panel .ingress-table td,
+.ingress-error-panel .ingress-table td * {
+  font-weight: 400;
+}
+
+.ingress-badge {
+  min-width: 70px;
+  height: 24px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.ingress-badge.reject { border: 1px solid rgba(255, 91, 85, 0.45); color: #ff786f; background: rgba(255, 91, 85, 0.12); }
+.ingress-badge.retry,
+.ingress-badge.hold { border: 1px solid rgba(255, 185, 40, 0.45); color: #ffd05f; background: rgba(255, 185, 40, 0.12); }
+.ingress-badge.info { border: 1px solid rgba(47, 140, 255, 0.45); color: #9fc9ff; background: rgba(47, 140, 255, 0.12); }
+
+.ingress-footnote {
+  margin: 12px 0 0;
+  color: #9fb2cb;
+  font-size: 12px;
+  text-align: center;
+}
+
+.master-shell.light .ingress-kpi,
+.master-shell.light .ingress-panel {
+  background: #FAFAFA;
+  border-color: #D1D5DB;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+}
+
+.master-shell.light .ingress-panel h3,
+.master-shell.light .ingress-panel-title h3,
+.master-shell.light .ingress-kpi strong,
+.master-shell.light .ingress-chart-grid h4,
+.master-shell.light .ingress-info-list strong,
+.master-shell.light .ingress-info-panel footer b,
+.master-shell.light .ingress-table td {
+  color: #111827;
+}
+
+.master-shell.light .ingress-kpi span,
+.master-shell.light .ingress-panel-title small,
+.master-shell.light .ingress-info-list span,
+.master-shell.light .ingress-info-panel footer span,
+.master-shell.light .ingress-footnote,
+.master-shell.light .ingress-table th {
+  color: #6B7280;
+}
+
+.master-shell.light .line-chart {
+  background:
+    linear-gradient(rgba(82, 112, 145, 0.14) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(82, 112, 145, 0.12) 1px, transparent 1px);
+  background-size: 100% 35px, 48px 100%;
+}
+
+.topbar-title span:not(.brand-diamond) {
+  font-size: 12px;
+}
+
+.ingress-info-list em {
+  min-width: 60px;
+  height: 24px;
+  font-size: 12px;
+  font-weight: 600;
+}

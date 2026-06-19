@@ -1,0 +1,20 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Local virtual environment accidentally created in this folder
+hifive/
+.venv/
+.venv_*/
+venv/
+
+# Runtime output
+logs/
+spool/
+.local/
+
+# Secrets / certs
+*.pem
+*.key
+.env
+.env.*

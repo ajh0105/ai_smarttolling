@@ -1,0 +1,107 @@
+# ============================================================
+# HiFive — 루트 .gitignore
+# ============================================================
+
+# ────────────────────────────────
+# OS / 에디터
+# ────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# ────────────────────────────────
+# 환경변수 / 시크릿
+# ────────────────────────────────
+.env
+.env.*
+!.env.example          # 샘플 파일은 커밋 허용
+*.pem
+*.key
+*.p12
+*.jks
+secrets/
+
+# ────────────────────────────────
+# Node.js / 프론트엔드
+# ────────────────────────────────
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/.pnpm-store/
+
+# 코드에서 참조하지 않는 대용량 테스트 영상 (최대 94MB — GitHub 100MB 제한 초과)
+frontend/src/video/
+frontend/src/videos/
+
+# ────────────────────────────────
+# Python / FastAPI · 챗봇
+# ────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+.venv_*/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# Ollama 관련 대용량 모델 파일
+*.gguf
+*.bin
+Modelfile.local
+
+# ────────────────────────────────
+# Java / Spring Boot
+# ────────────────────────────────
+backend-copy/.gradle/
+backend-copy/build/
+backend-copy/bin/
+backend-copy/out/
+backend-copy/.apt_generated
+backend-copy/.classpath
+backend-copy/.factorypath
+backend-copy/.project
+backend-copy/.settings/
+backend-copy/.springBeans
+backend-copy/.sts4-cache/
+backend-copy/.nb-gradle/
+backend-copy/nbproject/private/
+*.class
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+
+# ────────────────────────────────
+# Docker
+# ────────────────────────────────
+# 볼륨 마운트 데이터는 추적하지 않음
+postgres_data/
+
+# ────────────────────────────────
+# 로그 / 임시 파일
+# ────────────────────────────────
+*.log
+logs/
+spool/
+.local/
+*.tmp
+*.swp
+*.bak
+
+# ────────────────────────────────
+# AI / ML (YOLO 학습 산출물)
+# ────────────────────────────────
+runs/          # Ultralytics 학습 결과 디렉터리
+*.pt           # PyTorch 가중치 (수백 MB)
+*.onnx         # 변환 모델
+*.engine       # TensorRT 엔진
+*.trt
+datasets/      # 원천 데이터셋 (수십 GB)

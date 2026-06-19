@@ -1,0 +1,72 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: hifive-postgres
+    environment:
+      POSTGRES_DB: hifive
+      POSTGRES_USER: pgadmin
+      POSTGRES_PASSWORD: "1004"
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U pgadmin -d hifive"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    networks:
+      - hifive
+
+  backend:
+    build:
+      context: ./backend-copy
+    container_name: hifive-backend
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      HIFIVE_DB_URL: jdbc:postgresql://postgres:5432/hifive
+      HIFIVE_DB_USERNAME: pgadmin
+      HIFIVE_DB_PASSWORD: "1004"
+      HIFIVE_INGRESS_VIDEO_BASE_URL: http://fastapi-edge:8000
+    ports:
+      - "8585:8585"
+    networks:
+      - hifive
+
+  fastapi-edge:
+    build:
+      context: ./fastapi-edge
+    container_name: hifive-fastapi-edge
+    depends_on:
+      - backend
+    environment:
+      SPRING_REST_BASE_URL: http://backend:8585
+      EDGE_NODE_ID: EDGE-DOCKER-01
+    ports:
+      - "8000:8000"
+    networks:
+      - hifive
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: hifive-frontend
+    depends_on:
+      - backend
+      - fastapi-edge
+    environment:
+      VITE_API_TARGET: http://backend:8585
+      VITE_VIDEO_TARGET: http://fastapi-edge:8000
+    ports:
+      - "5173:5173"
+    networks:
+      - hifive
+
+networks:
+  hifive:
+    driver: bridge
+
+volumes:
+  postgres_data:
